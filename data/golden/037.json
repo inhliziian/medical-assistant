@@ -1,0 +1,30 @@
+{
+  "patient_age": null,
+  "patient_sex": "male",
+  "report_type": "consult",
+  "diagnoses": [
+    "knee osteoarthritis",
+    "chronic obstructive pulmonary disease",
+    "acute otitis media"
+  ],
+  "lab_values": [],
+  "medications": [
+    {
+      "name": "ibuprofen",
+      "dose": "400 mg",
+      "frequency": null
+    },
+    {
+      "name": "tiotropium",
+      "dose": "18 mcg",
+      "frequency": "1x/day"
+    },
+    {
+      "name": "amoxicillin",
+      "dose": null,
+      "frequency": "3x/day"
+    }
+  ],
+  "urgency": "routine",
+  "follow_up_required": true
+}

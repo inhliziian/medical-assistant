@@ -1,0 +1,12 @@
+{
+  "patient_age": 59,
+  "patient_sex": "female",
+  "report_type": "radiology",
+  "diagnoses": [
+    "L4-L5 disc protrusion"
+  ],
+  "lab_values": [],
+  "medications": [],
+  "urgency": "routine",
+  "follow_up_required": false
+}

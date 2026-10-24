@@ -1,0 +1,19 @@
+LABORATORY REPORT - Clinical Biochemistry and Haematology
+Requesting service: Internal Medicine, inpatient ward
+
+Patient: 68-year-old inpatient, sample received this morning.
+
+Clinical details supplied: Fever, productive cough and right basal crackles; chest film reported as right lower lobe consolidation and the team is treating community-acquired pneumonia. Painful, swollen left calf noted on the ward round; compression ultrasound this morning confirmed a deep vein thrombosis in the popliteal segment.
+
+Social history per requesting clinician: lives alone in a ground-floor flat, ex-smoker, independent with personal care and shopping.
+
+Allergies: no known drug allergies; skin reaction to adhesive dressings.
+
+Results
+CRP: 12 (H)
+White blood cells: 11.2 10^9/L (H)
+D-dimer: 2.4 (H)
+
+Interpretation: The raised CRP and white cell count are consistent with the stated infective picture, although the CRP rise is modest for a lobar pneumonia and may reflect early sampling. The D-dimer is elevated and is in keeping with the confirmed venous thrombosis; it adds little further diagnostic value now that imaging is positive. Treatment recorded on the request is amoxicillin-clavulanate 875/125 mg twice daily and rivaroxaban twice daily.
+
+Comment: Results were flagged as urgent and telephoned immediately to the ward nurse in charge. Repeat CRP and full blood count are recommended in 48-72 hours to confirm treatment response, with clinical review today by the medical team.

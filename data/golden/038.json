@@ -1,0 +1,18 @@
+{
+  "patient_age": null,
+  "patient_sex": "male",
+  "report_type": "referral",
+  "diagnoses": [
+    "gout"
+  ],
+  "lab_values": [],
+  "medications": [
+    {
+      "name": "allopurinol",
+      "dose": "100 mg",
+      "frequency": "1x/day"
+    }
+  ],
+  "urgency": "routine",
+  "follow_up_required": true
+}

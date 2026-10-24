@@ -1,0 +1,45 @@
+{
+  "patient_age": null,
+  "patient_sex": "female",
+  "report_type": "discharge",
+  "diagnoses": [
+    "essential hypertension",
+    "elevated liver enzymes"
+  ],
+  "lab_values": [
+    {
+      "name": "creatinine",
+      "value": 92.0,
+      "unit": "umol/L"
+    },
+    {
+      "name": "potassium",
+      "value": 4.4,
+      "unit": "mmol/L"
+    },
+    {
+      "name": "ALT",
+      "value": 128.0,
+      "unit": "U/L"
+    },
+    {
+      "name": "AST",
+      "value": 96.0,
+      "unit": null
+    }
+  ],
+  "medications": [
+    {
+      "name": "amlodipine",
+      "dose": "5 mg",
+      "frequency": "1x/day"
+    },
+    {
+      "name": "lisinopril",
+      "dose": "10 mg",
+      "frequency": null
+    }
+  ],
+  "urgency": "soon",
+  "follow_up_required": true
+}

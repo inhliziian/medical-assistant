@@ -1,0 +1,35 @@
+{
+  "patient_age": 34,
+  "patient_sex": "female",
+  "report_type": "progress_note",
+  "diagnoses": [
+    "major depressive disorder",
+    "community-acquired pneumonia"
+  ],
+  "lab_values": [
+    {
+      "name": "CRP",
+      "value": 12.0,
+      "unit": null
+    },
+    {
+      "name": "white blood cells",
+      "value": 11.2,
+      "unit": "10^9/L"
+    }
+  ],
+  "medications": [
+    {
+      "name": "sertraline",
+      "dose": null,
+      "frequency": "1x/day"
+    },
+    {
+      "name": "amoxicillin-clavulanate",
+      "dose": "875/125 mg",
+      "frequency": null
+    }
+  ],
+  "urgency": "routine",
+  "follow_up_required": false
+}

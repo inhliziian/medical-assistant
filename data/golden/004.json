@@ -1,0 +1,18 @@
+{
+  "patient_age": null,
+  "patient_sex": "male",
+  "report_type": "discharge",
+  "diagnoses": [
+    "lumbar radiculopathy"
+  ],
+  "lab_values": [],
+  "medications": [
+    {
+      "name": "naproxen",
+      "dose": "500 mg",
+      "frequency": "2x/day"
+    }
+  ],
+  "urgency": "urgent",
+  "follow_up_required": true
+}

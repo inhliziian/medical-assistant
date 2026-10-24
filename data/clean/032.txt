@@ -1,0 +1,44 @@
+NEUROLOGY CONSULT - ED / inpatient request
+
+Reason for consult
+- Asked to assess low back pain radiating down the R leg ? radiculopathy
+- Pt also c/o new abdominal pain since last night
+
+HPI
+- 3 wks of low back pain, shooting into R buttock, posterolateral thigh and lateral calf
+- Worse with sitting/coughing, paraesthesia over dorsum of R foot
+- No bladder/bowel change, no saddle anaesthesia
+- Taking naproxen twice daily with partial relief
+- Since ~18 h: periumbilical pain migrating to RIF, anorexia, nausea, 1x vomit
+- Known hyperlipidemia on atorvastatin 20 mg once daily
+
+Family history
+- Mother: hypercholesterolaemia, MI in her 60s
+- Father: lumbar spine surgery
+- No FHx of neuromuscular disease
+
+Exam
+- Afebrile on arrival, now T 38.1, HR 104, BP 122/76
+- Neuro: power 5/5 throughout except R EHL 4+/5; R ankle jerk present, knee jerks symmetrical
+- SLR positive on R at 40 deg; sensory loss in R L5 distribution
+- No UMN signs, gait antalgic
+- Abdomen: marked RIF tenderness with guarding, rebound +, Rovsing +
+
+Labs
+- WBC 15.4 10^9/L
+- CRP 86 mg/L
+- LDL cholesterol 4.1 mmol/L (from recent outpatient lipid panel)
+
+Impression
+1. Lumbar radiculopathy, R L5 - clinically compressive, no red-flag cauda equina features
+2. Acute appendicitis - clinical picture plus raised WBC and CRP; this is the priority
+3. Hyperlipidemia - not addressed today beyond medication reconciliation
+
+Plan
+- URGENT general surgery referral - discussed by phone, surgical registrar to see immediately
+- NBM from now; hold naproxen pending surgical decision
+- Plan details: IV access, group and save and pre-op bloods per surgical team; abdominal imaging at surgical discretion
+- MRI lumbar spine as inpatient once surgical issue managed, or as outpatient within 4-6 wks if discharged
+- Neurology to re-review after surgery; physiotherapy referral for radicular pain afterwards
+- Continue atorvastatin 20 mg once daily when eating again
+- Pt informed and agrees

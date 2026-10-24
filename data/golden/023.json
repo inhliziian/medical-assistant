@@ -1,0 +1,45 @@
+{
+  "patient_age": 41,
+  "patient_sex": "male",
+  "report_type": "consult",
+  "diagnoses": [
+    "essential hypertension",
+    "urinary tract infection"
+  ],
+  "lab_values": [
+    {
+      "name": "creatinine",
+      "value": 92.0,
+      "unit": "umol/L"
+    },
+    {
+      "name": "potassium",
+      "value": 4.4,
+      "unit": "mmol/L"
+    },
+    {
+      "name": "urine leukocytes",
+      "value": 500.0,
+      "unit": "/uL"
+    }
+  ],
+  "medications": [
+    {
+      "name": "amlodipine",
+      "dose": null,
+      "frequency": "1x/day"
+    },
+    {
+      "name": "lisinopril",
+      "dose": "10 mg",
+      "frequency": "1x/day"
+    },
+    {
+      "name": "nitrofurantoin",
+      "dose": "100 mg",
+      "frequency": "2x/day"
+    }
+  ],
+  "urgency": "soon",
+  "follow_up_required": true
+}

@@ -1,0 +1,171 @@
+{
+  "$defs": {
+    "LabValue": {
+      "properties": {
+        "name": {
+          "description": "Canonical English analyte name, e.g. 'potassium', 'HbA1c', 'CRP'",
+          "title": "Name",
+          "type": "string"
+        },
+        "value": {
+          "description": "Numeric value; a decimal comma in the source becomes a decimal point",
+          "title": "Value",
+          "type": "number"
+        },
+        "unit": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Unit exactly as stated in the text, null if the text gives none",
+          "title": "Unit"
+        }
+      },
+      "required": [
+        "name",
+        "value",
+        "unit"
+      ],
+      "title": "LabValue",
+      "type": "object",
+      "additionalProperties": false
+    },
+    "Medication": {
+      "properties": {
+        "name": {
+          "description": "Generic or brand name as written, lowercase",
+          "title": "Name",
+          "type": "string"
+        },
+        "dose": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Dose with unit, e.g. '500 mg'; null if not stated",
+          "title": "Dose"
+        },
+        "frequency": {
+          "anyOf": [
+            {
+              "enum": [
+                "1x/day",
+                "2x/day",
+                "3x/day",
+                "4x/day",
+                "weekly",
+                "as needed"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Normalised frequency; null if not stated",
+          "title": "Frequency"
+        }
+      },
+      "required": [
+        "name",
+        "dose",
+        "frequency"
+      ],
+      "title": "Medication",
+      "type": "object",
+      "additionalProperties": false
+    }
+  },
+  "properties": {
+    "patient_age": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "description": "Age in years; null if the text does not state it. Never guess.",
+      "title": "Patient Age"
+    },
+    "patient_sex": {
+      "enum": [
+        "male",
+        "female",
+        "unknown"
+      ],
+      "title": "Patient Sex",
+      "type": "string"
+    },
+    "report_type": {
+      "enum": [
+        "consult",
+        "progress_note",
+        "discharge",
+        "referral",
+        "lab",
+        "radiology"
+      ],
+      "title": "Report Type",
+      "type": "string"
+    },
+    "diagnoses": {
+      "description": "English, lowercase, one entry per condition",
+      "items": {
+        "type": "string"
+      },
+      "title": "Diagnoses",
+      "type": "array"
+    },
+    "lab_values": {
+      "items": {
+        "$ref": "#/$defs/LabValue"
+      },
+      "title": "Lab Values",
+      "type": "array"
+    },
+    "medications": {
+      "items": {
+        "$ref": "#/$defs/Medication"
+      },
+      "title": "Medications",
+      "type": "array"
+    },
+    "urgency": {
+      "description": "urgent = same day, soon = days to 2 weeks, routine = scheduled follow-up or none",
+      "enum": [
+        "routine",
+        "soon",
+        "urgent"
+      ],
+      "title": "Urgency",
+      "type": "string"
+    },
+    "follow_up_required": {
+      "title": "Follow Up Required",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "patient_age",
+    "patient_sex",
+    "report_type",
+    "diagnoses",
+    "lab_values",
+    "medications",
+    "urgency",
+    "follow_up_required"
+  ],
+  "title": "Report",
+  "type": "object",
+  "additionalProperties": false
+}

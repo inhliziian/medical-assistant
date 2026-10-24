@@ -1,0 +1,9 @@
+Urinalysis report
+Patient: female,81 years. Пацієнтку скеровано дільничним терапевтом зі скарггами на дизурію та часте сечовипускання.
+Urine leukocytes: 500 /uL
+
+
+Clinical data from the referring physician: on physcal exam, suprapubic tenderness, no costovertebral angle tenderness, afebrile, mild dehydration,no flank pain on percussion. Family history: non-contributory. Specimen: midstream urine, delivered to the lab wihin one hour.
+
+
+Interpretation: findings consistent with urinary tract infection. Лікуючим лікарем призначено nitrofurantoin 100 mg. Рекомендовано повторний аналіз сечі та огляд терапевта незабаром, протягом тижня.

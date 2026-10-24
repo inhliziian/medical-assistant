@@ -1,0 +1,41 @@
+{
+  "patient_age": null,
+  "patient_sex": "unknown",
+  "report_type": "consult",
+  "diagnoses": [
+    "lumbar radiculopathy",
+    "hyperlipidemia",
+    "acute appendicitis"
+  ],
+  "lab_values": [
+    {
+      "name": "LDL cholesterol",
+      "value": 4.1,
+      "unit": "mmol/L"
+    },
+    {
+      "name": "white blood cells",
+      "value": 15.4,
+      "unit": "10^9/L"
+    },
+    {
+      "name": "CRP",
+      "value": 86.0,
+      "unit": "mg/L"
+    }
+  ],
+  "medications": [
+    {
+      "name": "naproxen",
+      "dose": null,
+      "frequency": "2x/day"
+    },
+    {
+      "name": "atorvastatin",
+      "dose": "20 mg",
+      "frequency": "1x/day"
+    }
+  ],
+  "urgency": "urgent",
+  "follow_up_required": true
+}

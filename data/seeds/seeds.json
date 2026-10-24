@@ -1,0 +1,2616 @@
+[
+  {
+    "id": "001",
+    "facts": {
+      "patient_age": 56,
+      "patient_sex": "unknown",
+      "report_type": "consult",
+      "diagnoses": [
+        "iron deficiency anemia",
+        "elevated liver enzymes"
+      ],
+      "lab_values": [
+        {
+          "name": "hemoglobin",
+          "value": 9.8,
+          "unit": "g/dL"
+        },
+        {
+          "name": "ferritin",
+          "value": 8,
+          "unit": null
+        },
+        {
+          "name": "ALT",
+          "value": 128,
+          "unit": null
+        },
+        {
+          "name": "AST",
+          "value": 96,
+          "unit": "U/L"
+        }
+      ],
+      "medications": [
+        {
+          "name": "ferrous sulfate",
+          "dose": "325 mg",
+          "frequency": "1x/day"
+        }
+      ],
+      "urgency": "soon",
+      "follow_up_required": true
+    },
+    "hints": {
+      "language": "en",
+      "style": "bullet",
+      "length": "medium",
+      "target_words": 161,
+      "specialty": "hematology",
+      "modality": null,
+      "distractors": [
+        "vitals",
+        "plan details"
+      ]
+    },
+    "dirt": {
+      "typos": 3,
+      "decimal_comma": true,
+      "mangle_headers": false,
+      "case_noise": false,
+      "whitespace_noise": true,
+      "drop_sentence": false,
+      "truncate_tail": false
+    },
+    "golden": false
+  },
+  {
+    "id": "002",
+    "facts": {
+      "patient_age": null,
+      "patient_sex": "female",
+      "report_type": "discharge",
+      "diagnoses": [
+        "atrial fibrillation"
+      ],
+      "lab_values": [
+        {
+          "name": "INR",
+          "value": 1.1,
+          "unit": null
+        }
+      ],
+      "medications": [
+        {
+          "name": "apixaban",
+          "dose": "5 mg",
+          "frequency": "2x/day"
+        },
+        {
+          "name": "bisoprolol",
+          "dose": "2.5 mg",
+          "frequency": "1x/day"
+        }
+      ],
+      "urgency": "routine",
+      "follow_up_required": true
+    },
+    "hints": {
+      "language": "en",
+      "style": "narrative",
+      "length": "short",
+      "target_words": 80,
+      "specialty": "cardiology",
+      "modality": null,
+      "distractors": [
+        "review of systems",
+        "family history"
+      ]
+    },
+    "dirt": {
+      "typos": 4,
+      "decimal_comma": true,
+      "mangle_headers": false,
+      "case_noise": false,
+      "whitespace_noise": true,
+      "drop_sentence": true,
+      "truncate_tail": false
+    },
+    "golden": false
+  },
+  {
+    "id": "003",
+    "facts": {
+      "patient_age": 9,
+      "patient_sex": "female",
+      "report_type": "consult",
+      "diagnoses": [
+        "acute otitis media"
+      ],
+      "lab_values": [],
+      "medications": [
+        {
+          "name": "amoxicillin",
+          "dose": "250 mg",
+          "frequency": null
+        }
+      ],
+      "urgency": "routine",
+      "follow_up_required": true
+    },
+    "hints": {
+      "language": "en",
+      "style": "narrative",
+      "length": "medium",
+      "target_words": 168,
+      "specialty": "pediatrics",
+      "modality": null,
+      "distractors": [
+        "vitals",
+        "review of systems"
+      ]
+    },
+    "dirt": {
+      "typos": 5,
+      "decimal_comma": false,
+      "mangle_headers": false,
+      "case_noise": true,
+      "whitespace_noise": false,
+      "drop_sentence": true,
+      "truncate_tail": false
+    },
+    "golden": false
+  },
+  {
+    "id": "004",
+    "facts": {
+      "patient_age": null,
+      "patient_sex": "male",
+      "report_type": "discharge",
+      "diagnoses": [
+        "lumbar radiculopathy"
+      ],
+      "lab_values": [],
+      "medications": [
+        {
+          "name": "naproxen",
+          "dose": "500 mg",
+          "frequency": "2x/day"
+        }
+      ],
+      "urgency": "urgent",
+      "follow_up_required": true
+    },
+    "hints": {
+      "language": "mixed",
+      "style": "narrative",
+      "length": "medium",
+      "target_words": 215,
+      "specialty": "neurology",
+      "modality": null,
+      "distractors": [
+        "review of systems",
+        "plan details"
+      ]
+    },
+    "dirt": {
+      "typos": 2,
+      "decimal_comma": false,
+      "mangle_headers": true,
+      "case_noise": false,
+      "whitespace_noise": true,
+      "drop_sentence": false,
+      "truncate_tail": false
+    },
+    "golden": true
+  },
+  {
+    "id": "005",
+    "facts": {
+      "patient_age": 58,
+      "patient_sex": "male",
+      "report_type": "discharge",
+      "diagnoses": [
+        "chronic obstructive pulmonary disease",
+        "hyperlipidemia"
+      ],
+      "lab_values": [
+        {
+          "name": "LDL cholesterol",
+          "value": 4.1,
+          "unit": null
+        }
+      ],
+      "medications": [
+        {
+          "name": "tiotropium",
+          "dose": null,
+          "frequency": "1x/day"
+        },
+        {
+          "name": "atorvastatin",
+          "dose": "20 mg",
+          "frequency": "1x/day"
+        }
+      ],
+      "urgency": "routine",
+      "follow_up_required": false
+    },
+    "hints": {
+      "language": "en",
+      "style": "narrative",
+      "length": "medium",
+      "target_words": 176,
+      "specialty": "pulmonology",
+      "modality": null,
+      "distractors": [
+        "allergies",
+        "vitals"
+      ]
+    },
+    "dirt": {
+      "typos": 3,
+      "decimal_comma": false,
+      "mangle_headers": true,
+      "case_noise": true,
+      "whitespace_noise": false,
+      "drop_sentence": false,
+      "truncate_tail": false
+    },
+    "golden": false
+  },
+  {
+    "id": "006",
+    "facts": {
+      "patient_age": null,
+      "patient_sex": "male",
+      "report_type": "radiology",
+      "diagnoses": [
+        "simple renal cyst"
+      ],
+      "lab_values": [],
+      "medications": [],
+      "urgency": "urgent",
+      "follow_up_required": true
+    },
+    "hints": {
+      "language": "en",
+      "style": "narrative",
+      "length": "short",
+      "target_words": 55,
+      "specialty": "radiology",
+      "modality": "ultrasound abdomen",
+      "distractors": [
+        "allergies",
+        "vitals"
+      ]
+    },
+    "dirt": {
+      "typos": 5,
+      "decimal_comma": false,
+      "mangle_headers": false,
+      "case_noise": false,
+      "whitespace_noise": false,
+      "drop_sentence": false,
+      "truncate_tail": true
+    },
+    "golden": false
+  },
+  {
+    "id": "007",
+    "facts": {
+      "patient_age": null,
+      "patient_sex": "female",
+      "report_type": "radiology",
+      "diagnoses": [
+        "medial meniscus tear"
+      ],
+      "lab_values": [],
+      "medications": [],
+      "urgency": "urgent",
+      "follow_up_required": true
+    },
+    "hints": {
+      "language": "en",
+      "style": "narrative",
+      "length": "long",
+      "target_words": 267,
+      "specialty": "radiology",
+      "modality": "MRI knee",
+      "distractors": [
+        "social history",
+        "vitals"
+      ]
+    },
+    "dirt": {
+      "typos": 2,
+      "decimal_comma": false,
+      "mangle_headers": false,
+      "case_noise": true,
+      "whitespace_noise": true,
+      "drop_sentence": true,
+      "truncate_tail": false
+    },
+    "golden": false
+  },
+  {
+    "id": "008",
+    "facts": {
+      "patient_age": 68,
+      "patient_sex": "unknown",
+      "report_type": "lab",
+      "diagnoses": [
+        "community-acquired pneumonia",
+        "deep vein thrombosis"
+      ],
+      "lab_values": [
+        {
+          "name": "CRP",
+          "value": 12,
+          "unit": null
+        },
+        {
+          "name": "white blood cells",
+          "value": 11.2,
+          "unit": "10^9/L"
+        },
+        {
+          "name": "D-dimer",
+          "value": 2.4,
+          "unit": null
+        }
+      ],
+      "medications": [
+        {
+          "name": "amoxicillin-clavulanate",
+          "dose": "875/125 mg",
+          "frequency": "2x/day"
+        },
+        {
+          "name": "rivaroxaban",
+          "dose": null,
+          "frequency": "2x/day"
+        }
+      ],
+      "urgency": "urgent",
+      "follow_up_required": true
+    },
+    "hints": {
+      "language": "en",
+      "style": "narrative",
+      "length": "medium",
+      "target_words": 215,
+      "specialty": "internal medicine",
+      "modality": null,
+      "distractors": [
+        "social history",
+        "allergies"
+      ]
+    },
+    "dirt": {
+      "typos": 5,
+      "decimal_comma": false,
+      "mangle_headers": false,
+      "case_noise": false,
+      "whitespace_noise": true,
+      "drop_sentence": false,
+      "truncate_tail": false
+    },
+    "golden": false
+  },
+  {
+    "id": "009",
+    "facts": {
+      "patient_age": 52,
+      "patient_sex": "male",
+      "report_type": "radiology",
+      "diagnoses": [
+        "L4-L5 disc protrusion"
+      ],
+      "lab_values": [],
+      "medications": [],
+      "urgency": "routine",
+      "follow_up_required": false
+    },
+    "hints": {
+      "language": "en",
+      "style": "dictation",
+      "length": "short",
+      "target_words": 85,
+      "specialty": "radiology",
+      "modality": "MRI lumbar spine",
+      "distractors": [
+        "vitals",
+        "physical exam"
+      ]
+    },
+    "dirt": {
+      "typos": 5,
+      "decimal_comma": false,
+      "mangle_headers": true,
+      "case_noise": false,
+      "whitespace_noise": false,
+      "drop_sentence": true,
+      "truncate_tail": false
+    },
+    "golden": false
+  },
+  {
+    "id": "010",
+    "facts": {
+      "patient_age": 37,
+      "patient_sex": "male",
+      "report_type": "consult",
+      "diagnoses": [
+        "chronic kidney disease stage 3"
+      ],
+      "lab_values": [
+        {
+          "name": "creatinine",
+          "value": 180,
+          "unit": "umol/L"
+        },
+        {
+          "name": "eGFR",
+          "value": 38,
+          "unit": "mL/min"
+        },
+        {
+          "name": "potassium",
+          "value": 5.6,
+          "unit": "mmol/L"
+        }
+      ],
+      "medications": [
+        {
+          "name": "lisinopril",
+          "dose": "10 mg",
+          "frequency": null
+        }
+      ],
+      "urgency": "soon",
+      "follow_up_required": true
+    },
+    "hints": {
+      "language": "mixed",
+      "style": "narrative",
+      "length": "short",
+      "target_words": 73,
+      "specialty": "nephrology",
+      "modality": null,
+      "distractors": [
+        "social history",
+        "family history"
+      ]
+    },
+    "dirt": {
+      "typos": 4,
+      "decimal_comma": true,
+      "mangle_headers": true,
+      "case_noise": false,
+      "whitespace_noise": false,
+      "drop_sentence": false,
+      "truncate_tail": true
+    },
+    "golden": false
+  },
+  {
+    "id": "011",
+    "facts": {
+      "patient_age": 53,
+      "patient_sex": "male",
+      "report_type": "progress_note",
+      "diagnoses": [
+        "benign prostatic hyperplasia"
+      ],
+      "lab_values": [
+        {
+          "name": "PSA",
+          "value": 2.1,
+          "unit": "ng/mL"
+        }
+      ],
+      "medications": [
+        {
+          "name": "tamsulosin",
+          "dose": "0.4 mg",
+          "frequency": "1x/day"
+        }
+      ],
+      "urgency": "routine",
+      "follow_up_required": true
+    },
+    "hints": {
+      "language": "en",
+      "style": "soap",
+      "length": "medium",
+      "target_words": 151,
+      "specialty": "urology",
+      "modality": null,
+      "distractors": [
+        "allergies",
+        "plan details"
+      ]
+    },
+    "dirt": {
+      "typos": 3,
+      "decimal_comma": true,
+      "mangle_headers": false,
+      "case_noise": true,
+      "whitespace_noise": false,
+      "drop_sentence": false,
+      "truncate_tail": false
+    },
+    "golden": false
+  },
+  {
+    "id": "012",
+    "facts": {
+      "patient_age": 47,
+      "patient_sex": "male",
+      "report_type": "radiology",
+      "diagnoses": [
+        "L4-L5 disc protrusion"
+      ],
+      "lab_values": [],
+      "medications": [],
+      "urgency": "soon",
+      "follow_up_required": true
+    },
+    "hints": {
+      "language": "en",
+      "style": "narrative",
+      "length": "medium",
+      "target_words": 134,
+      "specialty": "radiology",
+      "modality": "MRI lumbar spine",
+      "distractors": [
+        "allergies",
+        "review of systems"
+      ]
+    },
+    "dirt": {
+      "typos": 2,
+      "decimal_comma": false,
+      "mangle_headers": true,
+      "case_noise": false,
+      "whitespace_noise": false,
+      "drop_sentence": false,
+      "truncate_tail": false
+    },
+    "golden": false
+  },
+  {
+    "id": "013",
+    "facts": {
+      "patient_age": 66,
+      "patient_sex": "female",
+      "report_type": "referral",
+      "diagnoses": [
+        "deep vein thrombosis"
+      ],
+      "lab_values": [],
+      "medications": [
+        {
+          "name": "rivaroxaban",
+          "dose": "15 mg",
+          "frequency": "2x/day"
+        }
+      ],
+      "urgency": "urgent",
+      "follow_up_required": true
+    },
+    "hints": {
+      "language": "mixed",
+      "style": "narrative",
+      "length": "short",
+      "target_words": 64,
+      "specialty": "vascular medicine",
+      "modality": null,
+      "distractors": [
+        "review of systems",
+        "physical exam"
+      ]
+    },
+    "dirt": {
+      "typos": 2,
+      "decimal_comma": false,
+      "mangle_headers": false,
+      "case_noise": false,
+      "whitespace_noise": false,
+      "drop_sentence": false,
+      "truncate_tail": false
+    },
+    "golden": false
+  },
+  {
+    "id": "014",
+    "facts": {
+      "patient_age": 36,
+      "patient_sex": "male",
+      "report_type": "consult",
+      "diagnoses": [
+        "benign prostatic hyperplasia",
+        "lumbar radiculopathy"
+      ],
+      "lab_values": [
+        {
+          "name": "PSA",
+          "value": 2.1,
+          "unit": "ng/mL"
+        }
+      ],
+      "medications": [
+        {
+          "name": "tamsulosin",
+          "dose": "0.4 mg",
+          "frequency": "1x/day"
+        },
+        {
+          "name": "naproxen",
+          "dose": "500 mg",
+          "frequency": null
+        }
+      ],
+      "urgency": "soon",
+      "follow_up_required": true
+    },
+    "hints": {
+      "language": "mixed",
+      "style": "narrative",
+      "length": "long",
+      "target_words": 269,
+      "specialty": "urology",
+      "modality": null,
+      "distractors": [
+        "family history",
+        "allergies"
+      ]
+    },
+    "dirt": {
+      "typos": 2,
+      "decimal_comma": false,
+      "mangle_headers": false,
+      "case_noise": true,
+      "whitespace_noise": true,
+      "drop_sentence": false,
+      "truncate_tail": false
+    },
+    "golden": false
+  },
+  {
+    "id": "015",
+    "facts": {
+      "patient_age": null,
+      "patient_sex": "male",
+      "report_type": "discharge",
+      "diagnoses": [
+        "benign prostatic hyperplasia"
+      ],
+      "lab_values": [
+        {
+          "name": "PSA",
+          "value": 2.1,
+          "unit": "ng/mL"
+        }
+      ],
+      "medications": [
+        {
+          "name": "tamsulosin",
+          "dose": null,
+          "frequency": "1x/day"
+        }
+      ],
+      "urgency": "routine",
+      "follow_up_required": true
+    },
+    "hints": {
+      "language": "en",
+      "style": "narrative",
+      "length": "medium",
+      "target_words": 176,
+      "specialty": "urology",
+      "modality": null,
+      "distractors": [
+        "vitals",
+        "plan details"
+      ]
+    },
+    "dirt": {
+      "typos": 5,
+      "decimal_comma": true,
+      "mangle_headers": false,
+      "case_noise": false,
+      "whitespace_noise": false,
+      "drop_sentence": false,
+      "truncate_tail": false
+    },
+    "golden": false
+  },
+  {
+    "id": "016",
+    "facts": {
+      "patient_age": null,
+      "patient_sex": "female",
+      "report_type": "discharge",
+      "diagnoses": [
+        "essential hypertension",
+        "elevated liver enzymes"
+      ],
+      "lab_values": [
+        {
+          "name": "creatinine",
+          "value": 92,
+          "unit": "umol/L"
+        },
+        {
+          "name": "potassium",
+          "value": 4.4,
+          "unit": "mmol/L"
+        },
+        {
+          "name": "ALT",
+          "value": 128,
+          "unit": "U/L"
+        },
+        {
+          "name": "AST",
+          "value": 96,
+          "unit": null
+        }
+      ],
+      "medications": [
+        {
+          "name": "amlodipine",
+          "dose": "5 mg",
+          "frequency": "1x/day"
+        },
+        {
+          "name": "lisinopril",
+          "dose": "10 mg",
+          "frequency": null
+        }
+      ],
+      "urgency": "soon",
+      "follow_up_required": true
+    },
+    "hints": {
+      "language": "en",
+      "style": "narrative",
+      "length": "long",
+      "target_words": 380,
+      "specialty": "general medicine",
+      "modality": null,
+      "distractors": [
+        "social history",
+        "plan details"
+      ]
+    },
+    "dirt": {
+      "typos": 5,
+      "decimal_comma": false,
+      "mangle_headers": true,
+      "case_noise": false,
+      "whitespace_noise": false,
+      "drop_sentence": false,
+      "truncate_tail": false
+    },
+    "golden": true
+  },
+  {
+    "id": "017",
+    "facts": {
+      "patient_age": 33,
+      "patient_sex": "unknown",
+      "report_type": "consult",
+      "diagnoses": [
+        "hyperlipidemia",
+        "vitamin D deficiency"
+      ],
+      "lab_values": [
+        {
+          "name": "LDL cholesterol",
+          "value": 4.1,
+          "unit": "mmol/L"
+        },
+        {
+          "name": "25-OH vitamin D",
+          "value": 14,
+          "unit": "ng/mL"
+        }
+      ],
+      "medications": [
+        {
+          "name": "atorvastatin",
+          "dose": "20 mg",
+          "frequency": "1x/day"
+        },
+        {
+          "name": "cholecalciferol",
+          "dose": "2000 IU",
+          "frequency": "1x/day"
+        }
+      ],
+      "urgency": "routine",
+      "follow_up_required": true
+    },
+    "hints": {
+      "language": "uk",
+      "style": "bullet",
+      "length": "medium",
+      "target_words": 212,
+      "specialty": "general medicine",
+      "modality": null,
+      "distractors": [
+        "social history",
+        "review of systems"
+      ]
+    },
+    "dirt": {
+      "typos": 3,
+      "decimal_comma": false,
+      "mangle_headers": true,
+      "case_noise": false,
+      "whitespace_noise": false,
+      "drop_sentence": true,
+      "truncate_tail": false
+    },
+    "golden": false
+  },
+  {
+    "id": "018",
+    "facts": {
+      "patient_age": 44,
+      "patient_sex": "unknown",
+      "report_type": "referral",
+      "diagnoses": [
+        "osteoporosis",
+        "hyperlipidemia"
+      ],
+      "lab_values": [],
+      "medications": [
+        {
+          "name": "alendronate",
+          "dose": "70 mg",
+          "frequency": "weekly"
+        },
+        {
+          "name": "atorvastatin",
+          "dose": "20 mg",
+          "frequency": "1x/day"
+        }
+      ],
+      "urgency": "routine",
+      "follow_up_required": true
+    },
+    "hints": {
+      "language": "en",
+      "style": "dictation",
+      "length": "long",
+      "target_words": 377,
+      "specialty": "endocrinology",
+      "modality": null,
+      "distractors": [
+        "plan details",
+        "allergies"
+      ]
+    },
+    "dirt": {
+      "typos": 2,
+      "decimal_comma": false,
+      "mangle_headers": true,
+      "case_noise": false,
+      "whitespace_noise": true,
+      "drop_sentence": false,
+      "truncate_tail": false
+    },
+    "golden": false
+  },
+  {
+    "id": "019",
+    "facts": {
+      "patient_age": 9,
+      "patient_sex": "female",
+      "report_type": "discharge",
+      "diagnoses": [
+        "acute otitis media"
+      ],
+      "lab_values": [],
+      "medications": [
+        {
+          "name": "amoxicillin",
+          "dose": "250 mg",
+          "frequency": "3x/day"
+        }
+      ],
+      "urgency": "routine",
+      "follow_up_required": true
+    },
+    "hints": {
+      "language": "en",
+      "style": "narrative",
+      "length": "medium",
+      "target_words": 148,
+      "specialty": "pediatrics",
+      "modality": null,
+      "distractors": [
+        "physical exam",
+        "vitals"
+      ]
+    },
+    "dirt": {
+      "typos": 4,
+      "decimal_comma": false,
+      "mangle_headers": false,
+      "case_noise": false,
+      "whitespace_noise": true,
+      "drop_sentence": false,
+      "truncate_tail": false
+    },
+    "golden": false
+  },
+  {
+    "id": "020",
+    "facts": {
+      "patient_age": 65,
+      "patient_sex": "male",
+      "report_type": "discharge",
+      "diagnoses": [
+        "knee osteoarthritis"
+      ],
+      "lab_values": [],
+      "medications": [
+        {
+          "name": "ibuprofen",
+          "dose": "400 mg",
+          "frequency": "as needed"
+        }
+      ],
+      "urgency": "routine",
+      "follow_up_required": true
+    },
+    "hints": {
+      "language": "en",
+      "style": "narrative",
+      "length": "short",
+      "target_words": 86,
+      "specialty": "orthopedics",
+      "modality": null,
+      "distractors": [
+        "allergies",
+        "family history"
+      ]
+    },
+    "dirt": {
+      "typos": 2,
+      "decimal_comma": false,
+      "mangle_headers": false,
+      "case_noise": false,
+      "whitespace_noise": true,
+      "drop_sentence": false,
+      "truncate_tail": false
+    },
+    "golden": false
+  },
+  {
+    "id": "021",
+    "facts": {
+      "patient_age": 20,
+      "patient_sex": "female",
+      "report_type": "lab",
+      "diagnoses": [
+        "elevated liver enzymes"
+      ],
+      "lab_values": [
+        {
+          "name": "ALT",
+          "value": 128,
+          "unit": null
+        },
+        {
+          "name": "AST",
+          "value": 96,
+          "unit": "U/L"
+        }
+      ],
+      "medications": [],
+      "urgency": "soon",
+      "follow_up_required": true
+    },
+    "hints": {
+      "language": "mixed",
+      "style": "narrative",
+      "length": "short",
+      "target_words": 74,
+      "specialty": "gastroenterology",
+      "modality": null,
+      "distractors": [
+        "review of systems",
+        "allergies"
+      ]
+    },
+    "dirt": {
+      "typos": 4,
+      "decimal_comma": false,
+      "mangle_headers": false,
+      "case_noise": false,
+      "whitespace_noise": true,
+      "drop_sentence": false,
+      "truncate_tail": true
+    },
+    "golden": false
+  },
+  {
+    "id": "022",
+    "facts": {
+      "patient_age": 81,
+      "patient_sex": "female",
+      "report_type": "lab",
+      "diagnoses": [
+        "urinary tract infection"
+      ],
+      "lab_values": [
+        {
+          "name": "urine leukocytes",
+          "value": 500,
+          "unit": "/uL"
+        }
+      ],
+      "medications": [
+        {
+          "name": "nitrofurantoin",
+          "dose": "100 mg",
+          "frequency": null
+        }
+      ],
+      "urgency": "soon",
+      "follow_up_required": true
+    },
+    "hints": {
+      "language": "mixed",
+      "style": "narrative",
+      "length": "short",
+      "target_words": 82,
+      "specialty": "general medicine",
+      "modality": null,
+      "distractors": [
+        "physical exam",
+        "family history"
+      ]
+    },
+    "dirt": {
+      "typos": 3,
+      "decimal_comma": true,
+      "mangle_headers": true,
+      "case_noise": true,
+      "whitespace_noise": true,
+      "drop_sentence": false,
+      "truncate_tail": false
+    },
+    "golden": false
+  },
+  {
+    "id": "023",
+    "facts": {
+      "patient_age": 41,
+      "patient_sex": "male",
+      "report_type": "consult",
+      "diagnoses": [
+        "essential hypertension",
+        "urinary tract infection"
+      ],
+      "lab_values": [
+        {
+          "name": "creatinine",
+          "value": 92,
+          "unit": "umol/L"
+        },
+        {
+          "name": "potassium",
+          "value": 4.4,
+          "unit": "mmol/L"
+        },
+        {
+          "name": "urine leukocytes",
+          "value": 500,
+          "unit": "/uL"
+        }
+      ],
+      "medications": [
+        {
+          "name": "amlodipine",
+          "dose": null,
+          "frequency": "1x/day"
+        },
+        {
+          "name": "lisinopril",
+          "dose": "10 mg",
+          "frequency": "1x/day"
+        },
+        {
+          "name": "nitrofurantoin",
+          "dose": "100 mg",
+          "frequency": "2x/day"
+        }
+      ],
+      "urgency": "soon",
+      "follow_up_required": true
+    },
+    "hints": {
+      "language": "en",
+      "style": "soap",
+      "length": "long",
+      "target_words": 364,
+      "specialty": "general medicine",
+      "modality": null,
+      "distractors": [
+        "physical exam",
+        "family history"
+      ]
+    },
+    "dirt": {
+      "typos": 2,
+      "decimal_comma": false,
+      "mangle_headers": true,
+      "case_noise": true,
+      "whitespace_noise": false,
+      "drop_sentence": false,
+      "truncate_tail": false
+    },
+    "golden": true
+  },
+  {
+    "id": "024",
+    "facts": {
+      "patient_age": null,
+      "patient_sex": "male",
+      "report_type": "progress_note",
+      "diagnoses": [
+        "elevated liver enzymes",
+        "allergic rhinitis"
+      ],
+      "lab_values": [
+        {
+          "name": "ALT",
+          "value": 128,
+          "unit": "U/L"
+        },
+        {
+          "name": "AST",
+          "value": 96,
+          "unit": "U/L"
+        }
+      ],
+      "medications": [
+        {
+          "name": "cetirizine",
+          "dose": "10 mg",
+          "frequency": "1x/day"
+        }
+      ],
+      "urgency": "soon",
+      "follow_up_required": true
+    },
+    "hints": {
+      "language": "en",
+      "style": "soap",
+      "length": "medium",
+      "target_words": 183,
+      "specialty": "gastroenterology",
+      "modality": null,
+      "distractors": [
+        "allergies",
+        "physical exam"
+      ]
+    },
+    "dirt": {
+      "typos": 5,
+      "decimal_comma": true,
+      "mangle_headers": false,
+      "case_noise": false,
+      "whitespace_noise": true,
+      "drop_sentence": false,
+      "truncate_tail": false
+    },
+    "golden": false
+  },
+  {
+    "id": "025",
+    "facts": {
+      "patient_age": 10,
+      "patient_sex": "unknown",
+      "report_type": "lab",
+      "diagnoses": [
+        "chronic kidney disease stage 3",
+        "acute otitis media"
+      ],
+      "lab_values": [
+        {
+          "name": "creatinine",
+          "value": 180,
+          "unit": null
+        },
+        {
+          "name": "eGFR",
+          "value": 38,
+          "unit": "mL/min"
+        },
+        {
+          "name": "potassium",
+          "value": 5.6,
+          "unit": "mmol/L"
+        }
+      ],
+      "medications": [
+        {
+          "name": "lisinopril",
+          "dose": "10 mg",
+          "frequency": null
+        },
+        {
+          "name": "amoxicillin",
+          "dose": null,
+          "frequency": "3x/day"
+        }
+      ],
+      "urgency": "routine",
+      "follow_up_required": true
+    },
+    "hints": {
+      "language": "en",
+      "style": "dictation",
+      "length": "medium",
+      "target_words": 180,
+      "specialty": "nephrology",
+      "modality": null,
+      "distractors": [
+        "vitals",
+        "social history"
+      ]
+    },
+    "dirt": {
+      "typos": 4,
+      "decimal_comma": true,
+      "mangle_headers": true,
+      "case_noise": true,
+      "whitespace_noise": false,
+      "drop_sentence": false,
+      "truncate_tail": false
+    },
+    "golden": false
+  },
+  {
+    "id": "026",
+    "facts": {
+      "patient_age": 78,
+      "patient_sex": "female",
+      "report_type": "discharge",
+      "diagnoses": [
+        "atrial fibrillation",
+        "gastroesophageal reflux disease"
+      ],
+      "lab_values": [
+        {
+          "name": "INR",
+          "value": 1.1,
+          "unit": null
+        }
+      ],
+      "medications": [
+        {
+          "name": "apixaban",
+          "dose": "5 mg",
+          "frequency": "2x/day"
+        },
+        {
+          "name": "bisoprolol",
+          "dose": null,
+          "frequency": null
+        },
+        {
+          "name": "omeprazole",
+          "dose": "20 mg",
+          "frequency": null
+        }
+      ],
+      "urgency": "routine",
+      "follow_up_required": false
+    },
+    "hints": {
+      "language": "en",
+      "style": "dictation",
+      "length": "medium",
+      "target_words": 123,
+      "specialty": "cardiology",
+      "modality": null,
+      "distractors": [
+        "review of systems",
+        "social history"
+      ]
+    },
+    "dirt": {
+      "typos": 2,
+      "decimal_comma": true,
+      "mangle_headers": true,
+      "case_noise": false,
+      "whitespace_noise": true,
+      "drop_sentence": true,
+      "truncate_tail": false
+    },
+    "golden": false
+  },
+  {
+    "id": "027",
+    "facts": {
+      "patient_age": 34,
+      "patient_sex": "female",
+      "report_type": "progress_note",
+      "diagnoses": [
+        "major depressive disorder",
+        "community-acquired pneumonia"
+      ],
+      "lab_values": [
+        {
+          "name": "CRP",
+          "value": 12,
+          "unit": null
+        },
+        {
+          "name": "white blood cells",
+          "value": 11.2,
+          "unit": "10^9/L"
+        }
+      ],
+      "medications": [
+        {
+          "name": "sertraline",
+          "dose": null,
+          "frequency": "1x/day"
+        },
+        {
+          "name": "amoxicillin-clavulanate",
+          "dose": "875/125 mg",
+          "frequency": null
+        }
+      ],
+      "urgency": "routine",
+      "follow_up_required": false
+    },
+    "hints": {
+      "language": "mixed",
+      "style": "soap",
+      "length": "medium",
+      "target_words": 135,
+      "specialty": "psychiatry",
+      "modality": null,
+      "distractors": [
+        "review of systems",
+        "social history"
+      ]
+    },
+    "dirt": {
+      "typos": 3,
+      "decimal_comma": false,
+      "mangle_headers": false,
+      "case_noise": false,
+      "whitespace_noise": false,
+      "drop_sentence": false,
+      "truncate_tail": false
+    },
+    "golden": true
+  },
+  {
+    "id": "028",
+    "facts": {
+      "patient_age": null,
+      "patient_sex": "male",
+      "report_type": "consult",
+      "diagnoses": [
+        "atopic dermatitis",
+        "asthma"
+      ],
+      "lab_values": [],
+      "medications": [
+        {
+          "name": "hydrocortisone 1% cream",
+          "dose": null,
+          "frequency": "2x/day"
+        },
+        {
+          "name": "salbutamol",
+          "dose": null,
+          "frequency": "as needed"
+        },
+        {
+          "name": "budesonide",
+          "dose": "200 mcg",
+          "frequency": "2x/day"
+        }
+      ],
+      "urgency": "soon",
+      "follow_up_required": true
+    },
+    "hints": {
+      "language": "en",
+      "style": "narrative",
+      "length": "medium",
+      "target_words": 130,
+      "specialty": "dermatology",
+      "modality": null,
+      "distractors": [
+        "family history",
+        "physical exam"
+      ]
+    },
+    "dirt": {
+      "typos": 4,
+      "decimal_comma": false,
+      "mangle_headers": true,
+      "case_noise": true,
+      "whitespace_noise": true,
+      "drop_sentence": false,
+      "truncate_tail": false
+    },
+    "golden": false
+  },
+  {
+    "id": "029",
+    "facts": {
+      "patient_age": 60,
+      "patient_sex": "male",
+      "report_type": "referral",
+      "diagnoses": [
+        "osteoporosis"
+      ],
+      "lab_values": [],
+      "medications": [
+        {
+          "name": "alendronate",
+          "dose": "70 mg",
+          "frequency": "weekly"
+        }
+      ],
+      "urgency": "routine",
+      "follow_up_required": true
+    },
+    "hints": {
+      "language": "en",
+      "style": "narrative",
+      "length": "medium",
+      "target_words": 182,
+      "specialty": "endocrinology",
+      "modality": null,
+      "distractors": [
+        "family history",
+        "review of systems"
+      ]
+    },
+    "dirt": {
+      "typos": 3,
+      "decimal_comma": false,
+      "mangle_headers": true,
+      "case_noise": false,
+      "whitespace_noise": false,
+      "drop_sentence": true,
+      "truncate_tail": false
+    },
+    "golden": false
+  },
+  {
+    "id": "030",
+    "facts": {
+      "patient_age": 26,
+      "patient_sex": "unknown",
+      "report_type": "progress_note",
+      "diagnoses": [
+        "deep vein thrombosis",
+        "urinary tract infection",
+        "gout"
+      ],
+      "lab_values": [
+        {
+          "name": "D-dimer",
+          "value": 2.4,
+          "unit": "mg/L"
+        },
+        {
+          "name": "urine leukocytes",
+          "value": 500,
+          "unit": "/uL"
+        },
+        {
+          "name": "uric acid",
+          "value": 520,
+          "unit": "umol/L"
+        }
+      ],
+      "medications": [
+        {
+          "name": "rivaroxaban",
+          "dose": "15 mg",
+          "frequency": "2x/day"
+        },
+        {
+          "name": "nitrofurantoin",
+          "dose": "100 mg",
+          "frequency": "2x/day"
+        },
+        {
+          "name": "allopurinol",
+          "dose": "100 mg",
+          "frequency": "1x/day"
+        }
+      ],
+      "urgency": "urgent",
+      "follow_up_required": true
+    },
+    "hints": {
+      "language": "uk",
+      "style": "narrative",
+      "length": "long",
+      "target_words": 365,
+      "specialty": "vascular medicine",
+      "modality": null,
+      "distractors": [
+        "plan details",
+        "vitals"
+      ]
+    },
+    "dirt": {
+      "typos": 2,
+      "decimal_comma": true,
+      "mangle_headers": true,
+      "case_noise": false,
+      "whitespace_noise": true,
+      "drop_sentence": false,
+      "truncate_tail": true
+    },
+    "golden": false
+  },
+  {
+    "id": "031",
+    "facts": {
+      "patient_age": 72,
+      "patient_sex": "female",
+      "report_type": "discharge",
+      "diagnoses": [
+        "atopic dermatitis",
+        "chronic obstructive pulmonary disease"
+      ],
+      "lab_values": [],
+      "medications": [
+        {
+          "name": "hydrocortisone 1% cream",
+          "dose": null,
+          "frequency": null
+        },
+        {
+          "name": "tiotropium",
+          "dose": "18 mcg",
+          "frequency": null
+        }
+      ],
+      "urgency": "routine",
+      "follow_up_required": true
+    },
+    "hints": {
+      "language": "en",
+      "style": "narrative",
+      "length": "long",
+      "target_words": 276,
+      "specialty": "dermatology",
+      "modality": null,
+      "distractors": [
+        "review of systems",
+        "social history"
+      ]
+    },
+    "dirt": {
+      "typos": 5,
+      "decimal_comma": false,
+      "mangle_headers": false,
+      "case_noise": false,
+      "whitespace_noise": false,
+      "drop_sentence": false,
+      "truncate_tail": false
+    },
+    "golden": false
+  },
+  {
+    "id": "032",
+    "facts": {
+      "patient_age": null,
+      "patient_sex": "female",
+      "report_type": "consult",
+      "diagnoses": [
+        "lumbar radiculopathy",
+        "hyperlipidemia",
+        "acute appendicitis"
+      ],
+      "lab_values": [
+        {
+          "name": "LDL cholesterol",
+          "value": 4.1,
+          "unit": "mmol/L"
+        },
+        {
+          "name": "white blood cells",
+          "value": 15.4,
+          "unit": "10^9/L"
+        },
+        {
+          "name": "CRP",
+          "value": 86,
+          "unit": "mg/L"
+        }
+      ],
+      "medications": [
+        {
+          "name": "naproxen",
+          "dose": null,
+          "frequency": "2x/day"
+        },
+        {
+          "name": "atorvastatin",
+          "dose": "20 mg",
+          "frequency": "1x/day"
+        }
+      ],
+      "urgency": "urgent",
+      "follow_up_required": true
+    },
+    "hints": {
+      "language": "en",
+      "style": "bullet",
+      "length": "long",
+      "target_words": 334,
+      "specialty": "neurology",
+      "modality": null,
+      "distractors": [
+        "family history",
+        "plan details"
+      ]
+    },
+    "dirt": {
+      "typos": 3,
+      "decimal_comma": true,
+      "mangle_headers": false,
+      "case_noise": false,
+      "whitespace_noise": true,
+      "drop_sentence": false,
+      "truncate_tail": false
+    },
+    "golden": true
+  },
+  {
+    "id": "033",
+    "facts": {
+      "patient_age": null,
+      "patient_sex": "female",
+      "report_type": "progress_note",
+      "diagnoses": [
+        "community-acquired pneumonia",
+        "hyperkalemia",
+        "elevated liver enzymes"
+      ],
+      "lab_values": [
+        {
+          "name": "CRP",
+          "value": 12,
+          "unit": null
+        },
+        {
+          "name": "white blood cells",
+          "value": 11.2,
+          "unit": "10^9/L"
+        },
+        {
+          "name": "potassium",
+          "value": 6.8,
+          "unit": "mmol/L"
+        },
+        {
+          "name": "ALT",
+          "value": 128,
+          "unit": "U/L"
+        },
+        {
+          "name": "AST",
+          "value": 96,
+          "unit": null
+        }
+      ],
+      "medications": [
+        {
+          "name": "amoxicillin-clavulanate",
+          "dose": "875/125 mg",
+          "frequency": "2x/day"
+        }
+      ],
+      "urgency": "urgent",
+      "follow_up_required": true
+    },
+    "hints": {
+      "language": "en",
+      "style": "dictation",
+      "length": "long",
+      "target_words": 292,
+      "specialty": "internal medicine",
+      "modality": null,
+      "distractors": [
+        "plan details",
+        "physical exam"
+      ]
+    },
+    "dirt": {
+      "typos": 4,
+      "decimal_comma": false,
+      "mangle_headers": true,
+      "case_noise": false,
+      "whitespace_noise": true,
+      "drop_sentence": false,
+      "truncate_tail": false
+    },
+    "golden": false
+  },
+  {
+    "id": "034",
+    "facts": {
+      "patient_age": null,
+      "patient_sex": "female",
+      "report_type": "lab",
+      "diagnoses": [
+        "asthma"
+      ],
+      "lab_values": [
+        {
+          "name": "hemoglobin",
+          "value": 13.4,
+          "unit": "g/dL"
+        }
+      ],
+      "medications": [
+        {
+          "name": "salbutamol",
+          "dose": "100 mcg",
+          "frequency": "as needed"
+        },
+        {
+          "name": "budesonide",
+          "dose": "200 mcg",
+          "frequency": "2x/day"
+        }
+      ],
+      "urgency": "urgent",
+      "follow_up_required": true
+    },
+    "hints": {
+      "language": "uk",
+      "style": "dictation",
+      "length": "medium",
+      "target_words": 172,
+      "specialty": "pulmonology",
+      "modality": null,
+      "distractors": [
+        "allergies",
+        "social history"
+      ]
+    },
+    "dirt": {
+      "typos": 5,
+      "decimal_comma": true,
+      "mangle_headers": false,
+      "case_noise": false,
+      "whitespace_noise": false,
+      "drop_sentence": false,
+      "truncate_tail": false
+    },
+    "golden": true
+  },
+  {
+    "id": "035",
+    "facts": {
+      "patient_age": 59,
+      "patient_sex": "female",
+      "report_type": "radiology",
+      "diagnoses": [
+        "L4-L5 disc protrusion"
+      ],
+      "lab_values": [],
+      "medications": [],
+      "urgency": "routine",
+      "follow_up_required": false
+    },
+    "hints": {
+      "language": "uk",
+      "style": "narrative",
+      "length": "short",
+      "target_words": 47,
+      "specialty": "radiology",
+      "modality": "MRI lumbar spine",
+      "distractors": [
+        "social history",
+        "plan details"
+      ]
+    },
+    "dirt": {
+      "typos": 5,
+      "decimal_comma": false,
+      "mangle_headers": false,
+      "case_noise": false,
+      "whitespace_noise": true,
+      "drop_sentence": false,
+      "truncate_tail": false
+    },
+    "golden": true
+  },
+  {
+    "id": "036",
+    "facts": {
+      "patient_age": 44,
+      "patient_sex": "female",
+      "report_type": "radiology",
+      "diagnoses": [
+        "simple renal cyst"
+      ],
+      "lab_values": [],
+      "medications": [],
+      "urgency": "routine",
+      "follow_up_required": true
+    },
+    "hints": {
+      "language": "uk",
+      "style": "narrative",
+      "length": "long",
+      "target_words": 300,
+      "specialty": "radiology",
+      "modality": "ultrasound abdomen",
+      "distractors": [
+        "social history",
+        "allergies"
+      ]
+    },
+    "dirt": {
+      "typos": 4,
+      "decimal_comma": false,
+      "mangle_headers": false,
+      "case_noise": false,
+      "whitespace_noise": true,
+      "drop_sentence": false,
+      "truncate_tail": false
+    },
+    "golden": false
+  },
+  {
+    "id": "037",
+    "facts": {
+      "patient_age": null,
+      "patient_sex": "male",
+      "report_type": "consult",
+      "diagnoses": [
+        "knee osteoarthritis",
+        "chronic obstructive pulmonary disease",
+        "acute otitis media"
+      ],
+      "lab_values": [],
+      "medications": [
+        {
+          "name": "ibuprofen",
+          "dose": "400 mg",
+          "frequency": null
+        },
+        {
+          "name": "tiotropium",
+          "dose": "18 mcg",
+          "frequency": "1x/day"
+        },
+        {
+          "name": "amoxicillin",
+          "dose": null,
+          "frequency": "3x/day"
+        }
+      ],
+      "urgency": "routine",
+      "follow_up_required": true
+    },
+    "hints": {
+      "language": "uk",
+      "style": "dictation",
+      "length": "long",
+      "target_words": 399,
+      "specialty": "orthopedics",
+      "modality": null,
+      "distractors": [
+        "physical exam",
+        "allergies"
+      ]
+    },
+    "dirt": {
+      "typos": 3,
+      "decimal_comma": false,
+      "mangle_headers": true,
+      "case_noise": false,
+      "whitespace_noise": false,
+      "drop_sentence": false,
+      "truncate_tail": false
+    },
+    "golden": true
+  },
+  {
+    "id": "038",
+    "facts": {
+      "patient_age": null,
+      "patient_sex": "male",
+      "report_type": "referral",
+      "diagnoses": [
+        "gout"
+      ],
+      "lab_values": [],
+      "medications": [
+        {
+          "name": "allopurinol",
+          "dose": "100 mg",
+          "frequency": "1x/day"
+        }
+      ],
+      "urgency": "routine",
+      "follow_up_required": true
+    },
+    "hints": {
+      "language": "mixed",
+      "style": "dictation",
+      "length": "medium",
+      "target_words": 145,
+      "specialty": "rheumatology",
+      "modality": null,
+      "distractors": [
+        "review of systems",
+        "allergies"
+      ]
+    },
+    "dirt": {
+      "typos": 2,
+      "decimal_comma": false,
+      "mangle_headers": true,
+      "case_noise": true,
+      "whitespace_noise": false,
+      "drop_sentence": false,
+      "truncate_tail": false
+    },
+    "golden": true
+  },
+  {
+    "id": "039",
+    "facts": {
+      "patient_age": null,
+      "patient_sex": "male",
+      "report_type": "progress_note",
+      "diagnoses": [
+        "gastroesophageal reflux disease"
+      ],
+      "lab_values": [],
+      "medications": [
+        {
+          "name": "omeprazole",
+          "dose": "20 mg",
+          "frequency": null
+        }
+      ],
+      "urgency": "soon",
+      "follow_up_required": true
+    },
+    "hints": {
+      "language": "en",
+      "style": "dictation",
+      "length": "medium",
+      "target_words": 137,
+      "specialty": "gastroenterology",
+      "modality": null,
+      "distractors": [
+        "plan details",
+        "allergies"
+      ]
+    },
+    "dirt": {
+      "typos": 3,
+      "decimal_comma": false,
+      "mangle_headers": true,
+      "case_noise": true,
+      "whitespace_noise": true,
+      "drop_sentence": true,
+      "truncate_tail": false
+    },
+    "golden": false
+  },
+  {
+    "id": "040",
+    "facts": {
+      "patient_age": null,
+      "patient_sex": "male",
+      "report_type": "progress_note",
+      "diagnoses": [
+        "chronic kidney disease stage 3"
+      ],
+      "lab_values": [
+        {
+          "name": "creatinine",
+          "value": 180,
+          "unit": null
+        },
+        {
+          "name": "eGFR",
+          "value": 38,
+          "unit": "mL/min"
+        },
+        {
+          "name": "potassium",
+          "value": 5.6,
+          "unit": "mmol/L"
+        }
+      ],
+      "medications": [
+        {
+          "name": "lisinopril",
+          "dose": "10 mg",
+          "frequency": null
+        }
+      ],
+      "urgency": "soon",
+      "follow_up_required": true
+    },
+    "hints": {
+      "language": "en",
+      "style": "narrative",
+      "length": "short",
+      "target_words": 83,
+      "specialty": "nephrology",
+      "modality": null,
+      "distractors": [
+        "allergies",
+        "vitals"
+      ]
+    },
+    "dirt": {
+      "typos": 4,
+      "decimal_comma": true,
+      "mangle_headers": false,
+      "case_noise": true,
+      "whitespace_noise": false,
+      "drop_sentence": true,
+      "truncate_tail": false
+    },
+    "golden": false
+  },
+  {
+    "id": "041",
+    "facts": {
+      "patient_age": 20,
+      "patient_sex": "female",
+      "report_type": "lab",
+      "diagnoses": [
+        "knee osteoarthritis"
+      ],
+      "lab_values": [
+        {
+          "name": "hemoglobin",
+          "value": 13.4,
+          "unit": "g/dL"
+        }
+      ],
+      "medications": [
+        {
+          "name": "ibuprofen",
+          "dose": "400 mg",
+          "frequency": null
+        }
+      ],
+      "urgency": "routine",
+      "follow_up_required": false
+    },
+    "hints": {
+      "language": "mixed",
+      "style": "narrative",
+      "length": "medium",
+      "target_words": 151,
+      "specialty": "orthopedics",
+      "modality": null,
+      "distractors": [
+        "plan details",
+        "social history"
+      ]
+    },
+    "dirt": {
+      "typos": 5,
+      "decimal_comma": false,
+      "mangle_headers": false,
+      "case_noise": false,
+      "whitespace_noise": true,
+      "drop_sentence": false,
+      "truncate_tail": false
+    },
+    "golden": false
+  },
+  {
+    "id": "042",
+    "facts": {
+      "patient_age": 83,
+      "patient_sex": "male",
+      "report_type": "consult",
+      "diagnoses": [
+        "benign prostatic hyperplasia",
+        "osteoporosis"
+      ],
+      "lab_values": [
+        {
+          "name": "PSA",
+          "value": 2.1,
+          "unit": null
+        }
+      ],
+      "medications": [
+        {
+          "name": "tamsulosin",
+          "dose": "0.4 mg",
+          "frequency": null
+        },
+        {
+          "name": "alendronate",
+          "dose": "70 mg",
+          "frequency": "weekly"
+        }
+      ],
+      "urgency": "soon",
+      "follow_up_required": true
+    },
+    "hints": {
+      "language": "en",
+      "style": "soap",
+      "length": "medium",
+      "target_words": 169,
+      "specialty": "urology",
+      "modality": null,
+      "distractors": [
+        "allergies",
+        "plan details"
+      ]
+    },
+    "dirt": {
+      "typos": 4,
+      "decimal_comma": true,
+      "mangle_headers": true,
+      "case_noise": false,
+      "whitespace_noise": true,
+      "drop_sentence": true,
+      "truncate_tail": true
+    },
+    "golden": false
+  },
+  {
+    "id": "043",
+    "facts": {
+      "patient_age": 79,
+      "patient_sex": "male",
+      "report_type": "progress_note",
+      "diagnoses": [
+        "benign prostatic hyperplasia"
+      ],
+      "lab_values": [
+        {
+          "name": "PSA",
+          "value": 2.1,
+          "unit": "ng/mL"
+        }
+      ],
+      "medications": [
+        {
+          "name": "tamsulosin",
+          "dose": "0.4 mg",
+          "frequency": "1x/day"
+        }
+      ],
+      "urgency": "routine",
+      "follow_up_required": false
+    },
+    "hints": {
+      "language": "uk",
+      "style": "dictation",
+      "length": "short",
+      "target_words": 65,
+      "specialty": "urology",
+      "modality": null,
+      "distractors": [
+        "plan details",
+        "allergies"
+      ]
+    },
+    "dirt": {
+      "typos": 2,
+      "decimal_comma": false,
+      "mangle_headers": false,
+      "case_noise": true,
+      "whitespace_noise": false,
+      "drop_sentence": false,
+      "truncate_tail": false
+    },
+    "golden": false
+  },
+  {
+    "id": "044",
+    "facts": {
+      "patient_age": null,
+      "patient_sex": "male",
+      "report_type": "consult",
+      "diagnoses": [
+        "hyperlipidemia"
+      ],
+      "lab_values": [
+        {
+          "name": "LDL cholesterol",
+          "value": 4.1,
+          "unit": "mmol/L"
+        }
+      ],
+      "medications": [
+        {
+          "name": "atorvastatin",
+          "dose": "20 mg",
+          "frequency": "1x/day"
+        }
+      ],
+      "urgency": "urgent",
+      "follow_up_required": true
+    },
+    "hints": {
+      "language": "uk",
+      "style": "bullet",
+      "length": "short",
+      "target_words": 85,
+      "specialty": "general medicine",
+      "modality": null,
+      "distractors": [
+        "social history",
+        "allergies"
+      ]
+    },
+    "dirt": {
+      "typos": 2,
+      "decimal_comma": false,
+      "mangle_headers": false,
+      "case_noise": false,
+      "whitespace_noise": false,
+      "drop_sentence": false,
+      "truncate_tail": false
+    },
+    "golden": false
+  },
+  {
+    "id": "045",
+    "facts": {
+      "patient_age": null,
+      "patient_sex": "male",
+      "report_type": "referral",
+      "diagnoses": [
+        "chronic obstructive pulmonary disease",
+        "osteoporosis"
+      ],
+      "lab_values": [],
+      "medications": [
+        {
+          "name": "tiotropium",
+          "dose": "18 mcg",
+          "frequency": null
+        },
+        {
+          "name": "alendronate",
+          "dose": "70 mg",
+          "frequency": "weekly"
+        }
+      ],
+      "urgency": "routine",
+      "follow_up_required": true
+    },
+    "hints": {
+      "language": "uk",
+      "style": "dictation",
+      "length": "medium",
+      "target_words": 140,
+      "specialty": "pulmonology",
+      "modality": null,
+      "distractors": [
+        "allergies",
+        "vitals"
+      ]
+    },
+    "dirt": {
+      "typos": 2,
+      "decimal_comma": false,
+      "mangle_headers": false,
+      "case_noise": true,
+      "whitespace_noise": true,
+      "drop_sentence": false,
+      "truncate_tail": false
+    },
+    "golden": false
+  },
+  {
+    "id": "046",
+    "facts": {
+      "patient_age": null,
+      "patient_sex": "male",
+      "report_type": "referral",
+      "diagnoses": [
+        "acute otitis media"
+      ],
+      "lab_values": [],
+      "medications": [
+        {
+          "name": "amoxicillin",
+          "dose": "250 mg",
+          "frequency": null
+        }
+      ],
+      "urgency": "soon",
+      "follow_up_required": true
+    },
+    "hints": {
+      "language": "en",
+      "style": "dictation",
+      "length": "medium",
+      "target_words": 196,
+      "specialty": "pediatrics",
+      "modality": null,
+      "distractors": [
+        "plan details",
+        "family history"
+      ]
+    },
+    "dirt": {
+      "typos": 2,
+      "decimal_comma": false,
+      "mangle_headers": true,
+      "case_noise": false,
+      "whitespace_noise": true,
+      "drop_sentence": true,
+      "truncate_tail": true
+    },
+    "golden": false
+  },
+  {
+    "id": "047",
+    "facts": {
+      "patient_age": 80,
+      "patient_sex": "female",
+      "report_type": "discharge",
+      "diagnoses": [
+        "knee osteoarthritis",
+        "major depressive disorder"
+      ],
+      "lab_values": [],
+      "medications": [
+        {
+          "name": "ibuprofen",
+          "dose": "400 mg",
+          "frequency": null
+        },
+        {
+          "name": "sertraline",
+          "dose": "50 mg",
+          "frequency": "1x/day"
+        }
+      ],
+      "urgency": "routine",
+      "follow_up_required": false
+    },
+    "hints": {
+      "language": "uk",
+      "style": "dictation",
+      "length": "medium",
+      "target_words": 129,
+      "specialty": "orthopedics",
+      "modality": null,
+      "distractors": [
+        "allergies",
+        "review of systems"
+      ]
+    },
+    "dirt": {
+      "typos": 4,
+      "decimal_comma": false,
+      "mangle_headers": true,
+      "case_noise": true,
+      "whitespace_noise": true,
+      "drop_sentence": false,
+      "truncate_tail": false
+    },
+    "golden": false
+  },
+  {
+    "id": "048",
+    "facts": {
+      "patient_age": null,
+      "patient_sex": "male",
+      "report_type": "consult",
+      "diagnoses": [
+        "heart failure with reduced ejection fraction",
+        "major depressive disorder",
+        "vitamin D deficiency"
+      ],
+      "lab_values": [
+        {
+          "name": "BNP",
+          "value": 890,
+          "unit": null
+        },
+        {
+          "name": "sodium",
+          "value": 134,
+          "unit": "mmol/L"
+        },
+        {
+          "name": "25-OH vitamin D",
+          "value": 14,
+          "unit": "ng/mL"
+        }
+      ],
+      "medications": [
+        {
+          "name": "furosemide",
+          "dose": "40 mg",
+          "frequency": "1x/day"
+        },
+        {
+          "name": "carvedilol",
+          "dose": "6.25 mg",
+          "frequency": "2x/day"
+        },
+        {
+          "name": "sertraline",
+          "dose": null,
+          "frequency": "1x/day"
+        },
+        {
+          "name": "cholecalciferol",
+          "dose": "2000 IU",
+          "frequency": "1x/day"
+        }
+      ],
+      "urgency": "soon",
+      "follow_up_required": true
+    },
+    "hints": {
+      "language": "en",
+      "style": "bullet",
+      "length": "long",
+      "target_words": 308,
+      "specialty": "cardiology",
+      "modality": null,
+      "distractors": [
+        "family history",
+        "social history"
+      ]
+    },
+    "dirt": {
+      "typos": 5,
+      "decimal_comma": false,
+      "mangle_headers": true,
+      "case_noise": false,
+      "whitespace_noise": true,
+      "drop_sentence": false,
+      "truncate_tail": false
+    },
+    "golden": true
+  },
+  {
+    "id": "049",
+    "facts": {
+      "patient_age": 43,
+      "patient_sex": "male",
+      "report_type": "progress_note",
+      "diagnoses": [
+        "heart failure with reduced ejection fraction",
+        "hypothyroidism"
+      ],
+      "lab_values": [
+        {
+          "name": "BNP",
+          "value": 890,
+          "unit": "pg/mL"
+        },
+        {
+          "name": "sodium",
+          "value": 134,
+          "unit": "mmol/L"
+        },
+        {
+          "name": "TSH",
+          "value": 6.8,
+          "unit": null
+        }
+      ],
+      "medications": [
+        {
+          "name": "furosemide",
+          "dose": null,
+          "frequency": "1x/day"
+        },
+        {
+          "name": "carvedilol",
+          "dose": "6.25 mg",
+          "frequency": null
+        },
+        {
+          "name": "levothyroxine",
+          "dose": null,
+          "frequency": "1x/day"
+        }
+      ],
+      "urgency": "soon",
+      "follow_up_required": true
+    },
+    "hints": {
+      "language": "mixed",
+      "style": "dictation",
+      "length": "medium",
+      "target_words": 190,
+      "specialty": "cardiology",
+      "modality": null,
+      "distractors": [
+        "vitals",
+        "allergies"
+      ]
+    },
+    "dirt": {
+      "typos": 5,
+      "decimal_comma": true,
+      "mangle_headers": true,
+      "case_noise": false,
+      "whitespace_noise": false,
+      "drop_sentence": true,
+      "truncate_tail": false
+    },
+    "golden": false
+  },
+  {
+    "id": "050",
+    "facts": {
+      "patient_age": 51,
+      "patient_sex": "female",
+      "report_type": "progress_note",
+      "diagnoses": [
+        "osteoporosis"
+      ],
+      "lab_values": [],
+      "medications": [
+        {
+          "name": "alendronate",
+          "dose": "70 mg",
+          "frequency": "weekly"
+        }
+      ],
+      "urgency": "routine",
+      "follow_up_required": true
+    },
+    "hints": {
+      "language": "en",
+      "style": "dictation",
+      "length": "medium",
+      "target_words": 149,
+      "specialty": "endocrinology",
+      "modality": null,
+      "distractors": [
+        "review of systems",
+        "allergies"
+      ]
+    },
+    "dirt": {
+      "typos": 5,
+      "decimal_comma": false,
+      "mangle_headers": true,
+      "case_noise": false,
+      "whitespace_noise": false,
+      "drop_sentence": false,
+      "truncate_tail": false
+    },
+    "golden": false
+  }
+]

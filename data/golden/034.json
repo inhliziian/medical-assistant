@@ -1,0 +1,29 @@
+{
+  "patient_age": null,
+  "patient_sex": "female",
+  "report_type": "lab",
+  "diagnoses": [
+    "asthma"
+  ],
+  "lab_values": [
+    {
+      "name": "hemoglobin",
+      "value": 13.4,
+      "unit": "g/dL"
+    }
+  ],
+  "medications": [
+    {
+      "name": "salbutamol",
+      "dose": "100 mcg",
+      "frequency": "as needed"
+    },
+    {
+      "name": "budesonide",
+      "dose": "200 mcg",
+      "frequency": "2x/day"
+    }
+  ],
+  "urgency": "urgent",
+  "follow_up_required": true
+}

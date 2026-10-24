@@ -1,0 +1,51 @@
+{
+  "patient_age": null,
+  "patient_sex": "unknown",
+  "report_type": "consult",
+  "diagnoses": [
+    "heart failure with reduced ejection fraction",
+    "major depressive disorder",
+    "vitamin D deficiency"
+  ],
+  "lab_values": [
+    {
+      "name": "BNP",
+      "value": 890.0,
+      "unit": null
+    },
+    {
+      "name": "sodium",
+      "value": 134.0,
+      "unit": "mmol/L"
+    },
+    {
+      "name": "25-OH vitamin D",
+      "value": 14.0,
+      "unit": "ng/mL"
+    }
+  ],
+  "medications": [
+    {
+      "name": "furosemide",
+      "dose": "40 mg",
+      "frequency": "1x/day"
+    },
+    {
+      "name": "carvedilol",
+      "dose": "6.25 mg",
+      "frequency": "2x/day"
+    },
+    {
+      "name": "sertraline",
+      "dose": null,
+      "frequency": "1x/day"
+    },
+    {
+      "name": "cholecalciferol",
+      "dose": "2000 IU",
+      "frequency": "1x/day"
+    }
+  ],
+  "urgency": "soon",
+  "follow_up_required": true
+}
