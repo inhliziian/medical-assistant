@@ -16,7 +16,7 @@ report:             ## rebuild REPORT.md and results/report-checkpoint-1.html fr
 	$(PY) main.py --skip-run
 
 score:              ## print the metrics table for all full runs
-	$(PY) scripts/score.py --fields results/*_full.jsonl
+	$(PY) scripts/score.py --fields results/*_full.json
 
 test:               ## offline checks: schema strictness, scorer rules, dataset facts
 	$(PY) scripts/verify_clean.py raw

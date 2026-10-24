@@ -74,7 +74,7 @@ def build_markdown(files: list[Path], out: Path) -> Path:
     # optional preview: golden-only runs of prompt versions that have no full run yet
     preview = ""
     full_prompts = set(prompts)
-    extra = sorted(p for p in (ROOT / "results").glob("*.jsonl") if not p.name.endswith("_full.jsonl"))
+    extra = sorted(p for p in (ROOT / "results").glob("*.json") if not p.name.endswith("_full.json"))
     extra_ms = [run_metrics(load_rows(p)) for p in extra]
     extra_ms = [m for m in extra_ms if m and m["prompt"] not in full_prompts]
     if extra_ms:

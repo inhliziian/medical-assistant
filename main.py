@@ -4,7 +4,7 @@
   python main.py                 # prompt v1, all configs, all documents (≈15 min, mostly the local model) -> REPORT.md + results/report-checkpoint-1.html
   python main.py --quick         # golden documents only (≈5 min)
   python main.py --prompts v1,v2 # also run prompt v2
-  python main.py --skip-run      # rebuild the reports from existing results/*_full.jsonl
+  python main.py --skip-run      # rebuild the reports from existing results/*_full.json
   python main.py --configs haiku_low,qwen_t0 --prompts v1 --docs 004,034
 Requires: .env with ANTHROPIC_API_KEY, Ollama running with the model named in config/runs.toml.
 """
@@ -49,7 +49,7 @@ def main() -> None:
     ap.add_argument("--prompts", default="v1", help="comma-separated prompt versions, e.g. v1,v2 (default: v1)")
     ap.add_argument("--docs", default="all", help="all | golden | comma-separated ids")
     ap.add_argument("--quick", action="store_true", help="golden documents only")
-    ap.add_argument("--skip-run", action="store_true", help="only rebuild reports from results/*_full.jsonl")
+    ap.add_argument("--skip-run", action="store_true", help="only rebuild reports from results/*_full.json")
     ap.add_argument("--quiet", action="store_true", help="no per-document progress lines")
     args = ap.parse_args()
 
@@ -58,9 +58,9 @@ def main() -> None:
 
     results_dir = ROOT / "results"
     if args.skip_run:
-        files = sorted(results_dir.glob("*_full.jsonl"))
+        files = sorted(results_dir.glob("*_full.json"))
         if not files:
-            sys.exit("no results/*_full.jsonl to report on")
+            sys.exit("no results/*_full.json to report on")
     else:
         from medassist.runner import run
         configs = [c.strip() for c in args.configs.split(",")] if args.configs else list(load_configs())

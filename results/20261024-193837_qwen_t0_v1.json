@@ -1,0 +1,621 @@
+[
+  {
+    "doc_id": "004",
+    "golden": true,
+    "prompt_version": "1",
+    "prompt_name": "v1",
+    "config": "qwen_t0",
+    "provider": "qwen",
+    "model": "qwen3:4b",
+    "params": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "seed": 42,
+      "think": false
+    },
+    "parsed": {
+      "patient_age": null,
+      "patient_sex": "male",
+      "report_type": "discharge",
+      "diagnoses": [
+        "lumbar radiculopathy (left L5)"
+      ],
+      "lab_values": [],
+      "medications": [
+        {
+          "name": "naproxen",
+          "dose": "500 mg",
+          "frequency": "2x/day"
+        }
+      ],
+      "urgency": "urgent",
+      "follow_up_required": true
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 4434.5,
+    "input_tokens": 503,
+    "output_tokens": 119,
+    "attempts": 1,
+    "error": null,
+    "extra": {
+      "done_reason": "stop",
+      "server_total_ms": 4386.5,
+      "server_eval_ms": 4228.4,
+      "cost_usd": 0.0
+    },
+    "cost_usd": 0.0,
+    "timestamp": "2026-10-24T17:39:04+00:00"
+  },
+  {
+    "doc_id": "016",
+    "golden": true,
+    "prompt_version": "1",
+    "prompt_name": "v1",
+    "config": "qwen_t0",
+    "provider": "qwen",
+    "model": "qwen3:4b",
+    "params": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "seed": 42,
+      "think": false
+    },
+    "parsed": {
+      "patient_age": null,
+      "patient_sex": "female",
+      "report_type": "discharge",
+      "diagnoses": [
+        "essential hypertension"
+      ],
+      "lab_values": [
+        {
+          "name": "creatinine",
+          "value": 92.0,
+          "unit": "umol/L"
+        },
+        {
+          "name": "potassium",
+          "value": 10.0,
+          "unit": "mmol/L"
+        },
+        {
+          "name": "ALT",
+          "value": 128.0,
+          "unit": "U/L"
+        },
+        {
+          "name": "AST",
+          "value": 96.0,
+          "unit": "U/L"
+        }
+      ],
+      "medications": [
+        {
+          "name": "amlodipine",
+          "dose": "5 mg",
+          "frequency": "1x/day"
+        },
+        {
+          "name": "lisinopril",
+          "dose": "10 mg",
+          "frequency": "1x/day"
+        }
+      ],
+      "urgency": "routine",
+      "follow_up_required": true
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 10436.3,
+    "input_tokens": 565,
+    "output_tokens": 259,
+    "attempts": 1,
+    "error": null,
+    "extra": {
+      "done_reason": "stop",
+      "server_total_ms": 10426.4,
+      "server_eval_ms": 8753.1,
+      "cost_usd": 0.0
+    },
+    "cost_usd": 0.0,
+    "timestamp": "2026-10-24T17:39:14+00:00"
+  },
+  {
+    "doc_id": "023",
+    "golden": true,
+    "prompt_version": "1",
+    "prompt_name": "v1",
+    "config": "qwen_t0",
+    "provider": "qwen",
+    "model": "qwen3:4b",
+    "params": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "seed": 42,
+      "think": false
+    },
+    "parsed": {
+      "patient_age": 41,
+      "patient_sex": "male",
+      "report_type": "consult",
+      "diagnoses": [
+        "Urinary tract infection - lower tract symptoms with marked pyuria, systemically well, no features of py: pyelonephritis",
+        "Essential hypertension - above target on the current regimen. Renal function and potassium are acceptable on the ACE inhibitor"
+      ],
+      "lab_values": [
+        {
+          "name": "creatinine",
+          "value": 92.0,
+          "unit": "umol/L"
+        },
+        {
+          "name": "potassium",
+          "value": 4.4,
+          "unit": "mmol/L"
+        },
+        {
+          "name": "urine leukocytes",
+          "value": 500.0,
+          "unit": "/uL"
+        }
+      ],
+      "medications": [
+        {
+          "name": "amlodipine",
+          "dose": "once daily",
+          "frequency": "1x/day"
+        },
+        {
+          "name": "lisinopril",
+          "dose": "10 mg",
+          "frequency": "1x/day"
+        },
+        {
+          "name": "nitrofurantoin",
+          "dose": "100 mg",
+          "frequency": "2x/day"
+        }
+      ],
+      "urgency": "urgent",
+      "follow_up_required": true
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 13387.5,
+    "input_tokens": 622,
+    "output_tokens": 326,
+    "attempts": 1,
+    "error": null,
+    "extra": {
+      "done_reason": "stop",
+      "server_total_ms": 13349.3,
+      "server_eval_ms": 11147.3,
+      "cost_usd": 0.0
+    },
+    "cost_usd": 0.0,
+    "timestamp": "2026-10-24T17:39:27+00:00"
+  },
+  {
+    "doc_id": "027",
+    "golden": true,
+    "prompt_version": "1",
+    "prompt_name": "v1",
+    "config": "qwen_t0",
+    "provider": "qwen",
+    "model": "qwen3:4b",
+    "params": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "seed": 42,
+      "think": false
+    },
+    "parsed": {
+      "patient_age": 34,
+      "patient_sex": "female",
+      "report_type": "consult",
+      "diagnoses": [
+        "Major depressive disorder — good response to treatment",
+        "Community-acquired pneumonia — resolving"
+      ],
+      "lab_values": [
+        {
+          "name": "CRP",
+          "value": 12.0,
+          "unit": "mg/L"
+        },
+        {
+          "name": "White blood cells",
+          "value": 11.2,
+          "unit": "10^9/L"
+        }
+      ],
+      "medications": [
+        {
+          "name": "sertraline",
+          "dose": "once daily",
+          "frequency": "1x/day"
+        },
+        {
+          "name": "amoxicillin-clavulanate",
+          "dose": "875/125 mg",
+          "frequency": "as needed"
+        }
+      ],
+      "urgency": "routine",
+      "follow_up_required": false
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 8984.9,
+    "input_tokens": 376,
+    "output_tokens": 228,
+    "attempts": 1,
+    "error": null,
+    "extra": {
+      "done_reason": "stop",
+      "server_total_ms": 8961.2,
+      "server_eval_ms": 7744.9,
+      "cost_usd": 0.0
+    },
+    "cost_usd": 0.0,
+    "timestamp": "2026-10-24T17:39:36+00:00"
+  },
+  {
+    "doc_id": "032",
+    "golden": true,
+    "prompt_version": "1",
+    "prompt_name": "v1",
+    "config": "qwen_t0",
+    "provider": "qwen",
+    "model": "qwen3:4b",
+    "params": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "seed": 42,
+      "think": false
+    },
+    "parsed": {
+      "patient_age": null,
+      "patient_sex": "male",
+      "report_type": "consult",
+      "diagnoses": [
+        "Lumbar radiculopathy, R L5 - clinically compressive, no red-flag cauda equina features",
+        "Acute appendicitis - clinical picture plus raised WBC and CRP; this is the priority",
+        "Hyperlipidemia - not addressed today beyond medication reconciliation"
+      ],
+      "lab_values": [
+        {
+          "name": "WBC",
+          "value": 15.4,
+          "unit": "10^9/L"
+        },
+        {
+          "name": "CRP",
+          "value": 86.0,
+          "unit": "mg/L"
+        },
+        {
+          "name": "LDL cholesterol",
+          "value": 4.1,
+          "unit": "mmol/L"
+        }
+      ],
+      "medications": [
+        {
+          "name": "Atorvastatin",
+          "dose": "20 mg",
+          "frequency": "1x/day"
+        }
+      ],
+      "urgency": "urgent",
+      "follow_up_required": true
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 10840.7,
+    "input_tokens": 613,
+    "output_tokens": 262,
+    "attempts": 1,
+    "error": null,
+    "extra": {
+      "done_reason": "stop",
+      "server_total_ms": 10828.0,
+      "server_eval_ms": 8777.9,
+      "cost_usd": 0.0
+    },
+    "cost_usd": 0.0,
+    "timestamp": "2026-10-24T17:39:47+00:00"
+  },
+  {
+    "doc_id": "034",
+    "golden": true,
+    "prompt_version": "1",
+    "prompt_name": "v1",
+    "config": "qwen_t0",
+    "provider": "qwen",
+    "model": "qwen3:4b",
+    "params": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "seed": 42,
+      "think": false
+    },
+    "parsed": {
+      "patient_age": null,
+      "patient_sex": "female",
+      "report_type": "lab",
+      "diagnoses": [
+        "bronchial asthma, exacerbation"
+      ],
+      "lab_values": [
+        {
+          "name": "hemoglobin",
+          "value": 13.4,
+          "unit": "g/dL"
+        }
+      ],
+      "medications": [
+        {
+          "name": "salbutamol",
+          "dose": "100 mcg",
+          "frequency": "as needed"
+        },
+        {
+          "name": "budesonide",
+          "dose": "200 mcg",
+          "frequency": "2x/day"
+        }
+      ],
+      "urgency": "urgent",
+      "follow_up_required": true
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 8470.9,
+    "input_tokens": 576,
+    "output_tokens": 184,
+    "attempts": 1,
+    "error": null,
+    "extra": {
+      "done_reason": "stop",
+      "server_total_ms": 8461.6,
+      "server_eval_ms": 6262.0,
+      "cost_usd": 0.0
+    },
+    "cost_usd": 0.0,
+    "timestamp": "2026-10-24T17:39:56+00:00"
+  },
+  {
+    "doc_id": "035",
+    "golden": true,
+    "prompt_version": "1",
+    "prompt_name": "v1",
+    "config": "qwen_t0",
+    "provider": "qwen",
+    "model": "qwen3:4b",
+    "params": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "seed": 42,
+      "think": false
+    },
+    "parsed": {
+      "patient_age": 59,
+      "patient_sex": "female",
+      "report_type": "radiology",
+      "diagnoses": [
+        "протрузія диска L4-L5"
+      ],
+      "lab_values": [],
+      "medications": [],
+      "urgency": "routine",
+      "follow_up_required": false
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 3571.0,
+    "input_tokens": 238,
+    "output_tokens": 84,
+    "attempts": 1,
+    "error": null,
+    "extra": {
+      "done_reason": "stop",
+      "server_total_ms": 3567.7,
+      "server_eval_ms": 2878.2,
+      "cost_usd": 0.0
+    },
+    "cost_usd": 0.0,
+    "timestamp": "2026-10-24T17:39:59+00:00"
+  },
+  {
+    "doc_id": "037",
+    "golden": true,
+    "prompt_version": "1",
+    "prompt_name": "v1",
+    "config": "qwen_t0",
+    "provider": "qwen",
+    "model": "qwen3:4b",
+    "params": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "seed": 42,
+      "think": false
+    },
+    "parsed": {
+      "patient_age": null,
+      "patient_sex": "male",
+      "report_type": "consult",
+      "diagnoses": [
+        "osteoarthritis right knee joint",
+        "chronic obstructive pulmonary disease",
+        "acute otitis media left"
+      ],
+      "lab_values": [
+        {
+          "name": "X-ray right knee joint",
+          "value": 1.0,
+          "unit": "mm"
+        }
+      ],
+      "medications": [
+        {
+          "name": "tiotropium",
+          "dose": "18 mcg",
+          "frequency": "1x/day"
+        },
+        {
+          "name": "amoxicillin",
+          "dose": "3x/day",
+          "frequency": "3x/day"
+        }
+      ],
+      "urgency": "urgent",
+      "follow_up_required": true
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 10964.2,
+    "input_tokens": 1292,
+    "output_tokens": 194,
+    "attempts": 1,
+    "error": null,
+    "extra": {
+      "done_reason": "stop",
+      "server_total_ms": 10956.3,
+      "server_eval_ms": 6878.7,
+      "cost_usd": 0.0
+    },
+    "cost_usd": 0.0,
+    "timestamp": "2026-10-24T17:40:10+00:00"
+  },
+  {
+    "doc_id": "038",
+    "golden": true,
+    "prompt_version": "1",
+    "prompt_name": "v1",
+    "config": "qwen_t0",
+    "provider": "qwen",
+    "model": "qwen3:4b",
+    "params": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "seed": 42,
+      "think": false
+    },
+    "parsed": {
+      "patient_age": null,
+      "patient_sex": "male",
+      "report_type": "referral",
+      "diagnoses": [
+        "gout"
+      ],
+      "lab_values": [],
+      "medications": [
+        {
+          "name": "allopurinol",
+          "dose": "100 mg",
+          "frequency": "1x/day"
+        }
+      ],
+      "urgency": "routine",
+      "follow_up_required": true
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 5211.1,
+    "input_tokens": 355,
+    "output_tokens": 113,
+    "attempts": 1,
+    "error": null,
+    "extra": {
+      "done_reason": "stop",
+      "server_total_ms": 5206.6,
+      "server_eval_ms": 3951.1,
+      "cost_usd": 0.0
+    },
+    "cost_usd": 0.0,
+    "timestamp": "2026-10-24T17:40:15+00:00"
+  },
+  {
+    "doc_id": "048",
+    "golden": true,
+    "prompt_version": "1",
+    "prompt_name": "v1",
+    "config": "qwen_t0",
+    "provider": "qwen",
+    "model": "qwen3:4b",
+    "params": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "seed": 42,
+      "think": false
+    },
+    "parsed": {
+      "patient_age": null,
+      "patient_sex": "male",
+      "report_type": "consult",
+      "diagnoses": [
+        "Heart failure with reduced ejection fraction",
+        "Major depressive disorder",
+        "Vitamin D deficiency"
+      ],
+      "lab_values": [
+        {
+          "name": "BNP",
+          "value": 890.0,
+          "unit": "pg/mL"
+        },
+        {
+          "name": "Sodium",
+          "value": 134.0,
+          "unit": "mmol/L"
+        },
+        {
+          "name": "25-OH vitamin D",
+          "value": 14.0,
+          "unit": "ng/mL"
+        }
+      ],
+      "medications": [
+        {
+          "name": "furosemide",
+          "dose": "40 mg",
+          "frequency": "1x/day"
+        },
+        {
+          "name": "carvedilol",
+          "dose": "6.25 mg",
+          "frequency": "2x/day"
+        },
+        {
+          "name": "sertraline",
+          "dose": "1x/day",
+          "frequency": "1x/day"
+        },
+        {
+          "name": "cholecalciferol",
+          "dose": "2000 IU",
+          "frequency": "1x/day"
+        }
+      ],
+      "urgency": "routine",
+      "follow_up_required": true
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 12972.7,
+    "input_tokens": 639,
+    "output_tokens": 324,
+    "attempts": 1,
+    "error": null,
+    "extra": {
+      "done_reason": "stop",
+      "server_total_ms": 12963.7,
+      "server_eval_ms": 10831.4,
+      "cost_usd": 0.0
+    },
+    "cost_usd": 0.0,
+    "timestamp": "2026-10-24T17:40:28+00:00"
+  }
+]

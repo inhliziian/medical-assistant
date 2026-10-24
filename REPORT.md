@@ -130,7 +130,7 @@ make run              # all configs × all prompt versions × all documents, the
 
 Result files used for this report:
 
-- `results/20261024-202633_haiku_high_v1_full.jsonl`
-- `results/20261024-202633_haiku_low_v1_full.jsonl`
-- `results/20261024-202633_qwen_t07_v1_full.jsonl`
-- `results/20261024-202633_qwen_t0_v1_full.jsonl`
+- `results/20261024-202633_haiku_high_v1_full.json`
+- `results/20261024-202633_haiku_low_v1_full.json`
+- `results/20261024-202633_qwen_t07_v1_full.json`
+- `results/20261024-202633_qwen_t0_v1_full.json`

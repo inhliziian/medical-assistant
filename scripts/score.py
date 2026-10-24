@@ -1,8 +1,8 @@
-"""Aggregate metrics from results/*.jsonl, or compare two runs document by document.
+"""Aggregate metrics from results/*.json, or compare two runs document by document.
 
-  uv run python scripts/score.py results/*.jsonl              # metrics table, one row per run file
-  uv run python scripts/score.py --fields results/X.jsonl     # add per-field accuracy breakdown
-  uv run python scripts/score.py --compare results/A.jsonl results/B.jsonl   # side-by-side on golden docs
+  uv run python scripts/score.py results/*.json              # metrics table, one row per run file
+  uv run python scripts/score.py --fields results/X.json     # add per-field accuracy breakdown
+  uv run python scripts/score.py --compare results/A.json results/B.json   # side-by-side on golden docs
 Accuracy uses only documents that have a golden label; validity, latency and cost use every document.
 """
 from __future__ import annotations

@@ -1,4 +1,7 @@
-"""Run documents through configurations and write one JSONL line per document."""
+"""Run documents through configurations and write one pretty-printed JSON array per run.
+
+Each record holds the parsed output, validity, latency, tokens, cost and the run parameters. The model's
+raw text is not stored (the parsed JSON is the deliverable); validation errors are kept for error analysis."""
 from __future__ import annotations
 
 import json
@@ -36,22 +39,21 @@ def run(configs: list[str], prompt_name: str, docs_spec: str = "all", tag: str =
     written: list[Path] = []
     for cname in configs:
         provider, cfg = get(cname)
-        out = RESULTS / f"{stamp}_{cname}_{prompt_name}{('_' + tag) if tag else ''}.jsonl"
+        out = RESULTS / f"{stamp}_{cname}_{prompt_name}{('_' + tag) if tag else ''}.json"
         print(f"== {cname} ({cfg.model}) | prompt {prompt.version} | {len(docs)} docs -> {out.relative_to(ROOT)}", flush=True)
         t_batch = time.perf_counter()
         n_valid = 0
-        with out.open("w", encoding="utf-8") as fh:
-            for i, doc in enumerate(docs, 1):
+        rows: list[dict] = []
+        for i, doc in enumerate(docs, 1):
                 text = (RAW / f"{doc}.txt").read_text(encoding="utf-8")
                 res = provider.extract(prompt.instructions, text)
                 row = res.to_dict()
-                row.update({
-                    "doc_id": doc, "golden": doc in golden_ids, "prompt_version": prompt.version,
-                    "prompt_name": prompt.name, "cost_usd": res.cost_usd,
-                    "timestamp": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-                })
-                fh.write(json.dumps(row, ensure_ascii=False) + "\n")
-                fh.flush()
+                row.pop("raw_text", None)
+                row = {"doc_id": doc, "golden": doc in golden_ids, "prompt_version": prompt.version,
+                       "prompt_name": prompt.name, **row, "cost_usd": res.cost_usd,
+                       "timestamp": datetime.now(timezone.utc).isoformat(timespec="seconds")}
+                rows.append(row)
+                out.write_text(json.dumps(rows, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
                 n_valid += res.valid
                 if not quiet:
                     status = "ok " if res.valid else ("ERR" if res.error else "inv")

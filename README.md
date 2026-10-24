@@ -23,13 +23,13 @@ make run                     # == python main.py
 ```
 
 `make run` executes every configuration with prompt v1 over all 50 documents (≈ 15 min, nearly all of it
-the local model), writes one JSONL per run into `results/`, and regenerates `REPORT.md` and
+the local model), writes one JSON file per run into `results/`, and regenerates `REPORT.md` and
 `results/report-checkpoint-1.html`. `python main.py --prompts v1,v2` also runs prompt v2. Other options:
 
 | command | what it does |
 |---|---|
 | `make quick` | golden documents only, ≈ 3 min |
-| `make report` | rebuild both reports from the existing `results/*_full.jsonl` without calling any model |
+| `make report` | rebuild both reports from the existing `results/*_full.json` without calling any model |
 | `make score` | print the metrics table |
 | `make test` | offline checks: dataset facts, schema strictness |
 | `python main.py --configs haiku_low --prompts v1 --docs 004` | one document, one config |
@@ -55,12 +55,12 @@ src/medassist/
   prompts.py                prompt files → system instructions
   scoring.py                matching rules, per-field comparison with a golden label
   metrics.py                aggregate metrics per run (accuracy, validity, p50/p95, cost)
-  runner.py                 the run loop, one JSONL line per document
+  runner.py                 the run loop, one JSON record per document
   report_html.py / report_md.py     report generators
 schema/                     re-export of the schema + report.schema.json (course deliverable)
 scripts/                    make_seeds, add_noise, verify_clean, make_golden, run, score, report, extract_one
 data/seeds | clean | raw | golden    dataset pipeline, see data/README.md
-results/                    model outputs, one JSONL per (config, prompt), committed
+results/                    model outputs, one JSON file per (config, prompt), committed
 results/report-checkpoint-1.html   interactive report
 REPORT.md                   comparison report
 docs/                       research notes (harder real-world datasets)

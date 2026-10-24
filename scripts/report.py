@@ -1,7 +1,7 @@
 """CLI: build the HTML report and REPORT.md from result files.
 
-  uv run python scripts/report.py                       # results/*_full.jsonl -> results/report-checkpoint-1.html + REPORT.md
-  uv run python scripts/report.py --files results/a.jsonl results/b.jsonl --out results/x.html
+  uv run python scripts/report.py                       # results/*_full.json -> results/report-checkpoint-1.html + REPORT.md
+  uv run python scripts/report.py --files results/a.json results/b.json --out results/x.html
 """
 from __future__ import annotations
 
@@ -17,12 +17,12 @@ from medassist.report_md import build_markdown  # noqa: E402
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--files", nargs="*", help="result files; default: results/*_full.jsonl")
+    ap.add_argument("--files", nargs="*", help="result files; default: results/*_full.json")
     ap.add_argument("--out", default=str(ROOT / "results" / "report-checkpoint-1.html"))
     ap.add_argument("--md", default=str(ROOT / "REPORT.md"))
     ap.add_argument("--title", default="Extraction Baseline Report")
     args = ap.parse_args()
-    files = [Path(f) for f in args.files] if args.files else sorted((ROOT / "results").glob("*_full.jsonl"))
+    files = [Path(f) for f in args.files] if args.files else sorted((ROOT / "results").glob("*_full.json"))
     if not files:
         raise SystemExit("no result files; run main.py first")
     html_out = build_html(files, Path(args.out), args.title)

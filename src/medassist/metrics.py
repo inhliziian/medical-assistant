@@ -12,7 +12,11 @@ GOLD = ROOT / "data" / "golden"
 
 
 def load_rows(path: Path) -> list[dict]:
-    return [json.loads(l) for l in path.read_text(encoding="utf-8").splitlines() if l.strip()]
+    """A result file is a pretty-printed JSON array (current) or JSON Lines (legacy)."""
+    text = path.read_text(encoding="utf-8")
+    if path.suffix == ".json":
+        return json.loads(text)
+    return [json.loads(l) for l in text.splitlines() if l.strip()]
 
 
 def golden_for(doc_id: str) -> dict | None:
