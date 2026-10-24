@@ -1,4 +1,4 @@
-"""Render the HTML report (reports/checkpoint-1.html) from result files. Self-contained page: inline CSS and SVG."""
+"""Render the HTML report (results/report-checkpoint-1.html) from result files. Self-contained page: inline CSS and SVG."""
 from __future__ import annotations
 
 import argparse

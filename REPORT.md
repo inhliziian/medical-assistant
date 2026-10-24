@@ -1,7 +1,7 @@
 # Comparison report: dirty clinical documents → schema-valid JSON
 
 Generated 2026-10-24 by `scripts/report.py` from the result files listed at the end.
-Interactive version with per-document tables: `reports/checkpoint-1.html`.
+Interactive version with per-document tables: `results/report-checkpoint-1.html`.
 
 ## 1. Setup
 

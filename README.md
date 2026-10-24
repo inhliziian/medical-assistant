@@ -5,7 +5,7 @@ numbers which model, prompt and settings should go to production. Checkpoint 1 c
 assignment (schema + baseline prompt + hosted model; second, local model + measurements). The same data
 and model interface feed the RAG and agent stages later.
 
-- Report: [`REPORT.md`](REPORT.md) · interactive version with per-document tables: `reports/checkpoint-1.html`
+- Report: [`REPORT.md`](REPORT.md) · interactive version with per-document tables: `results/report-checkpoint-1.html`
 - Dataset: 50 dirty documents (EN / UK / mixed), 10 golden labels — [`data/README.md`](data/README.md)
 - Prompts with versions and changelog: [`prompts/extraction/`](prompts/extraction/)
 
@@ -22,13 +22,13 @@ ollama pull qwen3:4b         # 2.5 GB; fits an 8 GB laptop
 make run                     # == python main.py
 ```
 
-`make run` executes every configuration × every prompt version × all 50 documents (≈ 20–40 min, nearly
-all of it the local model), writes one JSONL per run into `results/`, and regenerates `REPORT.md` and
-`reports/checkpoint-1.html`. Faster options:
+`make run` executes every configuration with prompt v1 over all 50 documents (≈ 15 min, nearly all of it
+the local model), writes one JSONL per run into `results/`, and regenerates `REPORT.md` and
+`results/report-checkpoint-1.html`. `python main.py --prompts v1,v2` also runs prompt v2. Other options:
 
 | command | what it does |
 |---|---|
-| `make quick` | golden documents only, ≈ 5 min |
+| `make quick` | golden documents only, ≈ 3 min |
 | `make report` | rebuild both reports from the existing `results/*_full.jsonl` without calling any model |
 | `make score` | print the metrics table |
 | `make test` | offline checks: dataset facts, schema strictness |
@@ -61,7 +61,7 @@ schema/                     re-export of the schema + report.schema.json (course
 scripts/                    make_seeds, add_noise, verify_clean, make_golden, run, score, report, extract_one
 data/seeds | clean | raw | golden    dataset pipeline, see data/README.md
 results/                    model outputs, one JSONL per (config, prompt), committed
-reports/checkpoint-1.html   interactive report
+results/report-checkpoint-1.html   interactive report
 REPORT.md                   comparison report
 docs/                       research notes (harder real-world datasets)
 ```
