@@ -10,7 +10,7 @@ from collections import Counter, defaultdict
 from datetime import date
 from pathlib import Path
 
-from .metrics import load_rows, run_metrics
+from .metrics import load_rows, run_metrics, row_status
 from .scoring import FIELDS, fmt_value
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -88,7 +88,7 @@ def dataset_summary() -> str:
     return f"""
 <div class="cards">
   <div class="card"><div class="k">{len(seeds)}</div><div class="l">documents in <code>data/raw</code></div></div>
-  <div class="card"><div class="k">{len(golden)}</div><div class="l">golden labels, hand-verified</div></div>
+  <div class="card"><div class="k">{len(golden)}</div><div class="l">golden labels (seed facts, checked against the text; status in <code>data/golden/STATUS.md</code>)</div></div>
   <div class="card"><div class="k">{langs['en']} / {langs['uk']} / {langs['mixed']}</div><div class="l">English / Ukrainian / mixed</div></div>
   <div class="card"><div class="k">{null_age}</div><div class="l">documents with no stated age</div></div>
 </div>
@@ -98,7 +98,7 @@ def dataset_summary() -> str:
 <tr><th>Missing by design</th><td>age not stated in {null_age}, sex not inferable in {unk_sex}, doses and frequencies withheld on some medications, units withheld on some lab values</td></tr>
 <tr><th>Noise applied</th><td>{", ".join(f"{k.replace('_', ' ')} ×{v}" for k, v in dirt.most_common())}</td></tr>
 <tr><th>Golden ids</th><td>{", ".join(golden)}</td></tr>
-<tr><th>Provenance</th><td>Synthetic. Notes written by Claude Opus 5.5 agents from deterministic seeds, then dirtied by <code>scripts/add_noise.py</code>. No personal data. The generation model is not one of the evaluated models.</td></tr>
+<tr><th>Provenance</th><td>Synthetic, no personal data. Pipeline: (1) <code>scripts/make_seeds.py</code> draws 50 deterministic seeds, each a schema-valid ground-truth record plus language, style, length and a dirt plan; (2) <strong>Claude Opus 5.5</strong>, run as five Claude Code subagents, writes one clean note per seed under <code>prompts/generation/v1.md</code> (every seed fact must appear, nothing schema-relevant may be invented, nulls mean silence); (3) <code>scripts/verify_clean.py</code> checks every fact against the text; (4) <code>scripts/add_noise.py</code> applies the dirt plan deterministically to produce <code>data/raw</code>; (5) <code>scripts/make_golden.py</code> writes the seed facts of the 10 golden documents as draft labels for human checking. The generation model is from the same family as the hosted evaluated model (Haiku 5.5) but is not one of the evaluated models; the extraction models never see seeds or clean text.</td></tr>
 </table></div>"""
 
 
@@ -147,10 +147,16 @@ def per_field_table(ms_: list[dict]) -> str:
 def failures(ms_: list[dict], runs: dict[str, list[dict]]) -> str:
     rows = []
     for m in ms_:
-        bad = [r for r in runs[label(m)] if not r["valid"]]
-        detail = "; ".join(f"{r['doc_id']}: {E((r.get('error') or r.get('validation_error') or '')[:90])}" for r in bad[:6])
-        rows.append(f"<tr><td><code>{E(m['config'])}</code> v{E(m['prompt'])}</td><td class='num'>{m['n'] - len(bad)}/{m['n']}</td><td class='num'>{m['n_invalid']}</td><td class='num'>{m['n_error']}</td><td class='num'>{m['retries']}</td><td>{detail or '—'}</td></tr>")
-    return ('<div class="tbl"><table><thead><tr><th>run</th><th>valid</th><th>schema-invalid</th><th>transport errors</th><th>retries</th><th>failed documents</th></tr></thead>'
+        noteworthy = [r for r in runs[label(m)] if row_status(r) != "ok"]
+        def note(r: dict) -> str:
+            first = (r.get("validation_errors") or [r.get("validation_error") or ""])[0]
+            return f"{r['doc_id']} <em>{row_status(r)}</em>: {E((r.get('error') or first)[:90])}"
+        detail = "; ".join(note(r) for r in noteworthy[:8])
+        rows.append(f"<tr><td><code>{E(m['config'])}</code> v{E(m['prompt'])}</td><td class='num'>{m['n_ok'] + m['n_repaired']}/{m['n']}</td>"
+                    f"<td class='num'>{m['n_first_invalid']}</td><td class='num'>{m['n_repaired']}</td><td class='num'>{m['n_failed']}</td>"
+                    f"<td class='num'>{m['n_error']}</td><td class='num'>{m['retries']}</td><td>{detail or '—'}</td></tr>")
+    return ('<div class="tbl"><table><thead><tr><th>run</th><th>valid<br><small>ok + repaired</small></th><th>invalid first answer</th><th>repaired</th><th>failed<br><small>after repair</small></th>'
+            '<th>transport errors</th><th>transport retries</th><th>documents that needed attention</th></tr></thead>'
             + "".join(rows) + "</table></div>")
 
 
@@ -207,6 +213,13 @@ def qa_section(ms_: list[dict]) -> str:
     sex_low = pct(low["per_field"]["patient_sex"]) if low else "n/a"
     sex_high = pct(high["per_field"]["patient_sex"]) if high else "n/a"
     qacc = f"{pct(q0['accuracy'])} at t=0 and {pct(q7['accuracy'])} at t=0.7" if q0 and q7 else "n/a"
+    lifts = []
+    for cfg_name in ("haiku_low", "haiku_high", "qwen_t0", "qwen_t07"):
+        a, b = by.get(f"{cfg_name} · v1"), by.get(f"{cfg_name} · v2")
+        if a and b:
+            lifts.append(f"<code>{cfg_name}</code> {pct(a['accuracy'])} → {pct(b['accuracy'])}")
+    lift_text = ("On the full runs it lifted golden field accuracy: " + ", ".join(lifts) + ".") if lifts else \
+        "On the golden set it lifted Haiku from 88.8% to 97.5% and Qwen from 68.8% to 83.8%."
     items = [
         ("Grammatical gender as evidence: how far may the model infer?",
          f"Document 037 is a Ukrainian consult note. The only gender cue is the masculine noun «Пацієнт», five times; there is no pronoun, no title, no gendered verb form. Haiku 5.5 at low effort answered <code>unknown</code> (sex accuracy {sex_low}), at high effort <code>male</code> ({sex_high}). Our golden label says male, and prompt v2 states the rule explicitly, after which both models answer male.",
@@ -215,7 +228,7 @@ def qa_section(ms_: list[dict]) -> str:
          f"Qwen3 4B scored {qacc}, with an identical per-field profile in both runs, over 50 documents. Ollama constrains generation to the JSON schema, so the sampler can only choose among tokens that keep the output valid.",
          "With schema-constrained decoding, is a temperature / top_p comparison still a meaningful experiment for extraction tasks? If not, which knob should take its place as the second \"sampling\" dimension: thinking on/off, context length, quantisation, model size? And for hosted models that reject temperature (Haiku 5.5), is <code>effort</code> the right analogue?"),
         ("If sampling does not move accuracy, the prompt is the only lever left. How much belongs in the prompt versus the schema?",
-         "Prompt v2 adds conventions learned from v1 errors (bare diagnosis names, sex from the patient's own pronouns, no invented units, dose and frequency in their own fields). On the golden set it lifted Haiku from 88.8% to 97.5% and Qwen from 68.8% to 83.8%. Some of these rules could instead live in the schema, for example a stricter enum for frequency or richer field descriptions.",
+         f"Prompt v2 adds conventions learned from v1 errors (bare diagnosis names, sex from the patient's own pronouns, no invented units, dose and frequency in their own fields). {lift_text} Some of these rules could instead live in the schema, for example a stricter enum for frequency or richer field descriptions. The field-by-field comparison and the v3 proposals are in <code>results/report-prompt-v1-vs-v2.html</code>.",
          "What is the recommended split between prompt rules and schema design? Do field descriptions in a JSON Schema reach the model as reliably as prompt text for both hosted and local providers? Is there a point where a long rule list starts to hurt a small local model?"),
         ("AI-generated data evaluated by AI: how serious is the familiarity bias, and how should we control for it?",
          "The 50 documents were written by Claude Opus 5.5 agents from deterministic seeds, then dirtied by a script. The hosted evaluated model is Claude Haiku 5.5, a different model but the same family; the local model is Qwen3 4B, a different family. Risk: Haiku reads Opus-written text more comfortably than it would read real clinic notes, inflating its score relative to Qwen.",
@@ -298,7 +311,7 @@ def render(ms_: list[dict], runs: dict[str, list[dict]], title: str, files: list
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>{CSS}</style>
 <div class="wrap">
-<p class="eyebrow">Course project · checkpoint 1 · steps 1-2 · {date.today().isoformat()}</p>
+<p class="eyebrow">Course project · steps 1–4 · model × prompt × sampling · {date.today().isoformat()}</p>
 <h1>{E(title)}</h1>
 <p class="lead">Dirty clinical documents go in, schema-valid JSON comes out. This page records the setup (schema, baseline prompt, two models behind one interface, sampling configurations) and the measurements: per-field accuracy on the golden set, validity, latency and cost over all {n_docs} documents.</p>
 <div class="cards">
@@ -333,12 +346,13 @@ def render(ms_: list[dict], runs: dict[str, list[dict]], title: str, files: list
 {overview_table(ms_)}
 {legend}
 {bar_chart(acc_items, 1.0, pct, "Per-field accuracy on the golden set")}
-{bar_chart(valid_items, 1.0, pct, "Share of documents with schema-valid JSON (after at most one retry)")}
+{bar_chart(valid_items, 1.0, pct, "Share of documents with schema-valid JSON (after at most one repair call)")}
 {bar_chart(lat_items, lat_max, ms, "Latency p50 per document", "Bars show the median; hover a bar for p95. The first local call after idle includes model loading, which shows up in p95, not p50.")}
 <h3>Accuracy by field</h3>
 <p>Darker cells are higher. The weakest field for every run is the one to read first.</p>
 {per_field_table(ms_)}
-<h3>Validity, failures and retries</h3>
+<h3>Validity, repairs and failures</h3>
+<p>Every answer is validated against the schema. An invalid answer gets exactly one repair call: same model, prompt and settings, with the invalid answer and the validation error appended to the conversation. A document is <em>repaired</em> if the second answer validates, <em>failed</em> if it does not. Transport errors (timeouts, HTTP errors) are retried separately and never count as repairs.</p>
 {failures(ms_, runs)}
 
 <h2>3. Golden documents, field by field</h2>
@@ -370,7 +384,7 @@ def render(ms_: list[dict], runs: dict[str, list[dict]], title: str, files: list
 """
 
 
-def build_html(files: list[Path], out: Path, title: str = "Extraction Baseline Report") -> Path:
+def build_html(files: list[Path], out: Path, title: str = "Extraction Comparison Report") -> Path:
     files = [Path(f).resolve() for f in files]
     runs_rows = [load_rows(f) for f in files]
     pairs = [(run_metrics(r), r) for r in runs_rows if r]

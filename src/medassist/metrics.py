@@ -31,6 +31,15 @@ def percentile(values: list[float], q: float) -> float:
     return s[min(len(s) - 1, max(0, round(q * (len(s) - 1))))]
 
 
+def row_status(r: dict) -> str:
+    """ok | repaired | failed | error. Result files written before the repair step have no `status`."""
+    if r.get("status"):
+        return r["status"]
+    if r.get("error"):
+        return "error"
+    return "ok" if r.get("valid") else "failed"
+
+
 def doc_scores(rows: list[dict]) -> dict[str, DocScore]:
     out = {}
     for r in rows:
@@ -55,14 +64,19 @@ def run_metrics(rows: list[dict]) -> dict:
     return {
         "config": first["config"], "provider": first["provider"], "model": first["model"],
         "prompt": str(first["prompt_version"]),
-        "params": {k: v for k, v in first["params"].items() if k in ("effort", "temperature", "top_p")},
+        "params": {k: v for k, v in first["params"].items() if k in ("effort", "temperature", "top_p", "constrained")},
+        "prompt_sha256": first.get("prompt_sha256"),
         "n": len(rows), "n_golden": n_gold,
         "accuracy": (sum(d.matched for d in scored.values()) / (8 * n_gold)) if n_gold else float("nan"),
         "doc_exact": (sum(d.matched == 8 for d in scored.values()) / n_gold) if n_gold else float("nan"),
-        "valid": sum(r["valid"] for r in rows) / len(rows),
-        "n_invalid": sum((not r["valid"]) and not r.get("error") for r in rows),
-        "n_error": sum(bool(r.get("error")) for r in rows),
-        "retries": sum(max(0, r.get("attempts", 1) - 1) for r in rows),
+        "valid": sum(r["valid"] for r in rows) / len(rows),          # ok + repaired
+        "n_ok": sum(row_status(r) == "ok" for r in rows),
+        "n_repaired": sum(row_status(r) == "repaired" for r in rows),
+        "n_failed": sum(row_status(r) == "failed" for r in rows),
+        "n_invalid": sum(row_status(r) == "failed" for r in rows),    # legacy name
+        "n_first_invalid": sum(row_status(r) in ("repaired", "failed") for r in rows),
+        "n_error": sum(row_status(r) == "error" for r in rows),
+        "retries": sum(r.get("transport_retries", max(0, r.get("attempts", 1) - 1)) for r in rows),
         "p50": percentile(lat, 0.5), "p95": percentile(lat, 0.95), "mean_ms": statistics.mean(lat),
         "cost_per_1000": (statistics.mean(costs) * 1000) if costs else 0.0,
         "avg_in": statistics.mean(in_tok) if in_tok else None, "avg_out": statistics.mean(out_tok) if out_tok else None,

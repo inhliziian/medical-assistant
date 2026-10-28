@@ -1,0 +1,2914 @@
+[
+  {
+    "doc_id": "001",
+    "golden": false,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": 56,
+      "patient_sex": "unknown",
+      "report_type": "consult",
+      "diagnoses": [
+        "iron deficiency anemia",
+        "elevated liver enzymes"
+      ],
+      "lab_values": [
+        {
+          "name": "hemoglobin",
+          "value": 9.8,
+          "unit": "g/dL"
+        },
+        {
+          "name": "ferritin",
+          "value": 8.0,
+          "unit": null
+        },
+        {
+          "name": "AST",
+          "value": 96.0,
+          "unit": "U/L"
+        },
+        {
+          "name": "ALT",
+          "value": 128.0,
+          "unit": null
+        }
+      ],
+      "medications": [
+        {
+          "name": "ferrous sulfate",
+          "dose": "325 mg",
+          "frequency": "1x/day"
+        }
+      ],
+      "urgency": "soon",
+      "follow_up_required": true
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 3185.5,
+    "input_tokens": 3319,
+    "output_tokens": 215,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTU9j8rCzey6kpQE7tBd",
+      "cost_usd": 0.00043940000000000006
+    },
+    "cost_usd": 0.00043940000000000006,
+    "timestamp": "2026-10-27T21:41:25+00:00"
+  },
+  {
+    "doc_id": "002",
+    "golden": false,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": null,
+      "patient_sex": "female",
+      "report_type": "discharge",
+      "diagnoses": [
+        "atrial fibrillation"
+      ],
+      "lab_values": [
+        {
+          "name": "INR",
+          "value": 1.1,
+          "unit": null
+        }
+      ],
+      "medications": [
+        {
+          "name": "apixaban",
+          "dose": "5 mg",
+          "frequency": "2x/day"
+        },
+        {
+          "name": "bisoprolol",
+          "dose": "2.5 mg",
+          "frequency": "1x/day"
+        }
+      ],
+      "urgency": "routine",
+      "follow_up_required": true
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 1830.4,
+    "input_tokens": 3012,
+    "output_tokens": 163,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTU9waDKRe513LwGG7gs",
+      "cost_usd": 0.0003827
+    },
+    "cost_usd": 0.0003827,
+    "timestamp": "2026-10-27T21:41:26+00:00"
+  },
+  {
+    "doc_id": "003",
+    "golden": false,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": 9,
+      "patient_sex": "female",
+      "report_type": "consult",
+      "diagnoses": [
+        "acute otitis media"
+      ],
+      "lab_values": [],
+      "medications": [
+        {
+          "name": "amoxicillin",
+          "dose": "250 mg",
+          "frequency": null
+        }
+      ],
+      "urgency": "routine",
+      "follow_up_required": true
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 1460.2,
+    "input_tokens": 3239,
+    "output_tokens": 103,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTUA5NmX4sUgpSmmonVS",
+      "cost_usd": 0.0003754
+    },
+    "cost_usd": 0.0003754,
+    "timestamp": "2026-10-27T21:41:28+00:00"
+  },
+  {
+    "doc_id": "004",
+    "golden": true,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": null,
+      "patient_sex": "male",
+      "report_type": "discharge",
+      "diagnoses": [
+        "lumbar radiculopathy"
+      ],
+      "lab_values": [],
+      "medications": [
+        {
+          "name": "naproxen",
+          "dose": "500 mg",
+          "frequency": "2x/day"
+        }
+      ],
+      "urgency": "urgent",
+      "follow_up_required": true
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 3079.4,
+    "input_tokens": 3359,
+    "output_tokens": 118,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTUABgHZnfPiFMKjCvci",
+      "cost_usd": 0.00039490000000000006
+    },
+    "cost_usd": 0.00039490000000000006,
+    "timestamp": "2026-10-27T21:41:31+00:00"
+  },
+  {
+    "doc_id": "005",
+    "golden": false,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": 58,
+      "patient_sex": "male",
+      "report_type": "discharge",
+      "diagnoses": [
+        "chronic obstructive pulmonary disease",
+        "hyperlipidemia"
+      ],
+      "lab_values": [
+        {
+          "name": "LDL cholesterol",
+          "value": 4.1,
+          "unit": null
+        }
+      ],
+      "medications": [
+        {
+          "name": "tiotropium",
+          "dose": null,
+          "frequency": "1x/day"
+        },
+        {
+          "name": "atorvastatin",
+          "dose": "20 mg",
+          "frequency": "1x/day"
+        }
+      ],
+      "urgency": "routine",
+      "follow_up_required": false
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 2756.7,
+    "input_tokens": 3273,
+    "output_tokens": 180,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTUAQsY9Akk2kzN7LmrE",
+      "cost_usd": 0.0004173
+    },
+    "cost_usd": 0.0004173,
+    "timestamp": "2026-10-27T21:41:34+00:00"
+  },
+  {
+    "doc_id": "006",
+    "golden": false,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": null,
+      "patient_sex": "unknown",
+      "report_type": "radiology",
+      "diagnoses": [
+        "simple renal cyst"
+      ],
+      "lab_values": [],
+      "medications": [],
+      "urgency": "urgent",
+      "follow_up_required": false
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 1312.2,
+    "input_tokens": 2984,
+    "output_tokens": 81,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTUAccyC7Ae1Kbsz3txb",
+      "cost_usd": 0.00033890000000000005
+    },
+    "cost_usd": 0.00033890000000000005,
+    "timestamp": "2026-10-27T21:41:35+00:00"
+  },
+  {
+    "doc_id": "007",
+    "golden": false,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": null,
+      "patient_sex": "unknown",
+      "report_type": "radiology",
+      "diagnoses": [
+        "medial meniscus tear"
+      ],
+      "lab_values": [],
+      "medications": [],
+      "urgency": "urgent",
+      "follow_up_required": true
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 1481.8,
+    "input_tokens": 3539,
+    "output_tokens": 82,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTUAiC5mfdWDabVD4LmP",
+      "cost_usd": 0.00039490000000000006
+    },
+    "cost_usd": 0.00039490000000000006,
+    "timestamp": "2026-10-27T21:41:37+00:00"
+  },
+  {
+    "doc_id": "008",
+    "golden": false,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": 68,
+      "patient_sex": "unknown",
+      "report_type": "lab",
+      "diagnoses": [
+        "community-acquired pneumonia",
+        "deep vein thrombosis"
+      ],
+      "lab_values": [
+        {
+          "name": "CRP",
+          "value": 12.0,
+          "unit": null
+        },
+        {
+          "name": "white blood cells",
+          "value": 11.2,
+          "unit": "10^9/L"
+        },
+        {
+          "name": "D-dimer",
+          "value": 2.4,
+          "unit": null
+        }
+      ],
+      "medications": [
+        {
+          "name": "amoxicillin-clavulanate",
+          "dose": "875/125 mg",
+          "frequency": "2x/day"
+        },
+        {
+          "name": "rivaroxaban",
+          "dose": null,
+          "frequency": "2x/day"
+        }
+      ],
+      "urgency": "urgent",
+      "follow_up_required": true
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 1374.2,
+    "input_tokens": 3380,
+    "output_tokens": 234,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTUApbo91bWqRP8fE5di",
+      "cost_usd": 0.000455
+    },
+    "cost_usd": 0.000455,
+    "timestamp": "2026-10-27T21:41:38+00:00"
+  },
+  {
+    "doc_id": "009",
+    "golden": false,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": 52,
+      "patient_sex": "male",
+      "report_type": "radiology",
+      "diagnoses": [
+        "intervertebral disc protrusion"
+      ],
+      "lab_values": [],
+      "medications": [],
+      "urgency": "routine",
+      "follow_up_required": false
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 2665.2,
+    "input_tokens": 3067,
+    "output_tokens": 369,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTUAvRYMJa5oAPBadsM5",
+      "cost_usd": 0.0004912
+    },
+    "cost_usd": 0.0004912,
+    "timestamp": "2026-10-27T21:41:41+00:00"
+  },
+  {
+    "doc_id": "010",
+    "golden": false,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": 37,
+      "patient_sex": "male",
+      "report_type": "consult",
+      "diagnoses": [
+        "chronic kidney disease stage 3"
+      ],
+      "lab_values": [
+        {
+          "name": "creatinine",
+          "value": 180.0,
+          "unit": "umol/L"
+        },
+        {
+          "name": "eGFR",
+          "value": 38.0,
+          "unit": "mL/min"
+        },
+        {
+          "name": "potassium",
+          "value": 5.6,
+          "unit": "mmol/L"
+        }
+      ],
+      "medications": [
+        {
+          "name": "lisinopril",
+          "dose": "10 mg",
+          "frequency": null
+        }
+      ],
+      "urgency": "soon",
+      "follow_up_required": true
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 2228.3,
+    "input_tokens": 3054,
+    "output_tokens": 185,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTUB7t6tQ4v9tXz526RU",
+      "cost_usd": 0.0003979
+    },
+    "cost_usd": 0.0003979,
+    "timestamp": "2026-10-27T21:41:43+00:00"
+  },
+  {
+    "doc_id": "011",
+    "golden": false,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": 53,
+      "patient_sex": "male",
+      "report_type": "progress_note",
+      "diagnoses": [
+        "benign prostatic hyperplasia"
+      ],
+      "lab_values": [
+        {
+          "name": "PSA",
+          "value": 2.1,
+          "unit": "ng/mL"
+        }
+      ],
+      "medications": [
+        {
+          "name": "tamsulosin",
+          "dose": "0.4 mg",
+          "frequency": "1x/day"
+        }
+      ],
+      "urgency": "routine",
+      "follow_up_required": true
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 1140.3,
+    "input_tokens": 3269,
+    "output_tokens": 145,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTUBHRacnXrMpyengTrd",
+      "cost_usd": 0.00039940000000000006
+    },
+    "cost_usd": 0.00039940000000000006,
+    "timestamp": "2026-10-27T21:41:44+00:00"
+  },
+  {
+    "doc_id": "012",
+    "golden": false,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": 47,
+      "patient_sex": "male",
+      "report_type": "radiology",
+      "diagnoses": [
+        "lumbar disc protrusion",
+        "lumbar radiculopathy"
+      ],
+      "lab_values": [],
+      "medications": [],
+      "urgency": "soon",
+      "follow_up_required": true
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 1572.3,
+    "input_tokens": 3220,
+    "output_tokens": 92,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTUBNKX65LyoZD8CVu4J",
+      "cost_usd": 0.000368
+    },
+    "cost_usd": 0.000368,
+    "timestamp": "2026-10-27T21:41:46+00:00"
+  },
+  {
+    "doc_id": "013",
+    "golden": false,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": 66,
+      "patient_sex": "female",
+      "report_type": "referral",
+      "diagnoses": [
+        "deep vein thrombosis"
+      ],
+      "lab_values": [],
+      "medications": [
+        {
+          "name": "rivaroxaban",
+          "dose": "15 mg",
+          "frequency": "2x/day"
+        }
+      ],
+      "urgency": "urgent",
+      "follow_up_required": true
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 1430.9,
+    "input_tokens": 3019,
+    "output_tokens": 113,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTUBV4LJ5MpzSpygKtZ8",
+      "cost_usd": 0.00035840000000000004
+    },
+    "cost_usd": 0.00035840000000000004,
+    "timestamp": "2026-10-27T21:41:47+00:00"
+  },
+  {
+    "doc_id": "014",
+    "golden": false,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": 36,
+      "patient_sex": "male",
+      "report_type": "consult",
+      "diagnoses": [
+        "benign prostatic hyperplasia",
+        "lumbar radiculopathy"
+      ],
+      "lab_values": [
+        {
+          "name": "PSA",
+          "value": 2.1,
+          "unit": "ng/mL"
+        }
+      ],
+      "medications": [
+        {
+          "name": "tamsulosin",
+          "dose": "0.4 mg",
+          "frequency": "1x/day"
+        },
+        {
+          "name": "naproxen",
+          "dose": "500 mg",
+          "frequency": null
+        }
+      ],
+      "urgency": "soon",
+      "follow_up_required": true
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 3712.4,
+    "input_tokens": 3671,
+    "output_tokens": 428,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTUBbBve4d5DNKbxiBGz",
+      "cost_usd": 0.0005811
+    },
+    "cost_usd": 0.0005811,
+    "timestamp": "2026-10-27T21:41:51+00:00"
+  },
+  {
+    "doc_id": "015",
+    "golden": false,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": null,
+      "patient_sex": "male",
+      "report_type": "discharge",
+      "diagnoses": [
+        "benign prostatic hyperplasia"
+      ],
+      "lab_values": [
+        {
+          "name": "PSA",
+          "value": 2.1,
+          "unit": "ng/mL"
+        }
+      ],
+      "medications": [
+        {
+          "name": "tamsulosin",
+          "dose": null,
+          "frequency": "1x/day"
+        }
+      ],
+      "urgency": "routine",
+      "follow_up_required": true
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 2211.7,
+    "input_tokens": 3311,
+    "output_tokens": 146,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTUBs6swXD2TW3ua5FVk",
+      "cost_usd": 0.0004041
+    },
+    "cost_usd": 0.0004041,
+    "timestamp": "2026-10-27T21:41:53+00:00"
+  },
+  {
+    "doc_id": "016",
+    "golden": true,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": null,
+      "patient_sex": "female",
+      "report_type": "discharge",
+      "diagnoses": [
+        "essential hypertension"
+      ],
+      "lab_values": [
+        {
+          "name": "creatinine",
+          "value": 92.0,
+          "unit": "umol/L"
+        },
+        {
+          "name": "potassium",
+          "value": 4.4,
+          "unit": "mmol/L"
+        },
+        {
+          "name": "ALT",
+          "value": 128.0,
+          "unit": "U/L"
+        },
+        {
+          "name": "AST",
+          "value": 96.0,
+          "unit": null
+        }
+      ],
+      "medications": [
+        {
+          "name": "amlodipine",
+          "dose": "5 mg",
+          "frequency": "1x/day"
+        },
+        {
+          "name": "lisinopril",
+          "dose": "10 mg",
+          "frequency": null
+        }
+      ],
+      "urgency": "soon",
+      "follow_up_required": true
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 2205.8,
+    "input_tokens": 3649,
+    "output_tokens": 227,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTUC2ZtuWSwYMaFgo2uB",
+      "cost_usd": 0.00047840000000000003
+    },
+    "cost_usd": 0.00047840000000000003,
+    "timestamp": "2026-10-27T21:41:55+00:00"
+  },
+  {
+    "doc_id": "017",
+    "golden": false,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": 33,
+      "patient_sex": "unknown",
+      "report_type": "consult",
+      "diagnoses": [
+        "hyperlipidemia",
+        "vitamin d deficiency"
+      ],
+      "lab_values": [
+        {
+          "name": "LDL cholesterol",
+          "value": 4.1,
+          "unit": "mmol/L"
+        },
+        {
+          "name": "25-OH vitamin D",
+          "value": 14.0,
+          "unit": "ng/mL"
+        }
+      ],
+      "medications": [
+        {
+          "name": "atorvastatin",
+          "dose": "20 mg",
+          "frequency": "1x/day"
+        },
+        {
+          "name": "cholecalciferol",
+          "dose": "2000 IU",
+          "frequency": "1x/day"
+        }
+      ],
+      "urgency": "routine",
+      "follow_up_required": true
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 2613.7,
+    "input_tokens": 3400,
+    "output_tokens": 488,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTUCBzwZmK1DKfgePA3j",
+      "cost_usd": 0.000584
+    },
+    "cost_usd": 0.000584,
+    "timestamp": "2026-10-27T21:41:58+00:00"
+  },
+  {
+    "doc_id": "018",
+    "golden": false,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": 44,
+      "patient_sex": "unknown",
+      "report_type": "referral",
+      "diagnoses": [
+        "osteoporosis",
+        "hyperlipidemia"
+      ],
+      "lab_values": [],
+      "medications": [
+        {
+          "name": "alendronate",
+          "dose": "70 mg",
+          "frequency": "weekly"
+        },
+        {
+          "name": "atorvastatin",
+          "dose": "20 mg",
+          "frequency": "1x/day"
+        }
+      ],
+      "urgency": "routine",
+      "follow_up_required": true
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 1438.2,
+    "input_tokens": 3608,
+    "output_tokens": 159,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTUCPDNjMgHcaog7Kurb",
+      "cost_usd": 0.0004403
+    },
+    "cost_usd": 0.0004403,
+    "timestamp": "2026-10-27T21:41:59+00:00"
+  },
+  {
+    "doc_id": "019",
+    "golden": false,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": 9,
+      "patient_sex": "female",
+      "report_type": "discharge",
+      "diagnoses": [
+        "acute otitis media"
+      ],
+      "lab_values": [],
+      "medications": [
+        {
+          "name": "amoxicillin",
+          "dose": "250 mg",
+          "frequency": "3x/day"
+        }
+      ],
+      "urgency": "routine",
+      "follow_up_required": true
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 1176.5,
+    "input_tokens": 3190,
+    "output_tokens": 109,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTUCVPwdzT1juz1S8AGL",
+      "cost_usd": 0.0003735
+    },
+    "cost_usd": 0.0003735,
+    "timestamp": "2026-10-27T21:42:00+00:00"
+  },
+  {
+    "doc_id": "020",
+    "golden": false,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": 65,
+      "patient_sex": "male",
+      "report_type": "discharge",
+      "diagnoses": [
+        "knee osteoarthritis"
+      ],
+      "lab_values": [],
+      "medications": [
+        {
+          "name": "ibuprofen",
+          "dose": "400 mg",
+          "frequency": "as needed"
+        }
+      ],
+      "urgency": "routine",
+      "follow_up_required": true
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 2388.9,
+    "input_tokens": 3033,
+    "output_tokens": 111,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTUCaKciUNkLdRgT3gQy",
+      "cost_usd": 0.0003588
+    },
+    "cost_usd": 0.0003588,
+    "timestamp": "2026-10-27T21:42:03+00:00"
+  },
+  {
+    "doc_id": "021",
+    "golden": false,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": 20,
+      "patient_sex": "female",
+      "report_type": "lab",
+      "diagnoses": [],
+      "lab_values": [
+        {
+          "name": "ALT",
+          "value": 128.0,
+          "unit": null
+        },
+        {
+          "name": "AST",
+          "value": 96.0,
+          "unit": "U/L"
+        }
+      ],
+      "medications": [],
+      "urgency": "routine",
+      "follow_up_required": false
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 2130.6,
+    "input_tokens": 3025,
+    "output_tokens": 110,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTUCkYWnR8Bd1hmZ1YYy",
+      "cost_usd": 0.0003575
+    },
+    "cost_usd": 0.0003575,
+    "timestamp": "2026-10-27T21:42:05+00:00"
+  },
+  {
+    "doc_id": "022",
+    "golden": false,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": 81,
+      "patient_sex": "female",
+      "report_type": "lab",
+      "diagnoses": [
+        "urinary tract infection"
+      ],
+      "lab_values": [
+        {
+          "name": "urine leukocytes",
+          "value": 500.0,
+          "unit": "/uL"
+        }
+      ],
+      "medications": [
+        {
+          "name": "nitrofurantoin",
+          "dose": "100 mg",
+          "frequency": null
+        }
+      ],
+      "urgency": "soon",
+      "follow_up_required": true
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 2378.6,
+    "input_tokens": 3097,
+    "output_tokens": 373,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTUCugghmh3xAwT9nF7W",
+      "cost_usd": 0.0004962
+    },
+    "cost_usd": 0.0004962,
+    "timestamp": "2026-10-27T21:42:07+00:00"
+  },
+  {
+    "doc_id": "023",
+    "golden": true,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": 41,
+      "patient_sex": "male",
+      "report_type": "consult",
+      "diagnoses": [
+        "urinary tract infection",
+        "essential hypertension"
+      ],
+      "lab_values": [
+        {
+          "name": "creatinine",
+          "value": 92.0,
+          "unit": "umol/L"
+        },
+        {
+          "name": "potassium",
+          "value": 4.4,
+          "unit": "mmol/L"
+        },
+        {
+          "name": "urine leukocytes",
+          "value": 500.0,
+          "unit": "/uL"
+        }
+      ],
+      "medications": [
+        {
+          "name": "amlodipine",
+          "dose": null,
+          "frequency": "1x/day"
+        },
+        {
+          "name": "lisinopril",
+          "dose": "10 mg",
+          "frequency": "1x/day"
+        },
+        {
+          "name": "nitrofurantoin",
+          "dose": "100 mg",
+          "frequency": "2x/day"
+        }
+      ],
+      "urgency": "soon",
+      "follow_up_required": true
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 2089.5,
+    "input_tokens": 3705,
+    "output_tokens": 256,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTUD62HnV37bkBCCs96M",
+      "cost_usd": 0.0004985
+    },
+    "cost_usd": 0.0004985,
+    "timestamp": "2026-10-27T21:42:09+00:00"
+  },
+  {
+    "doc_id": "024",
+    "golden": false,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": null,
+      "patient_sex": "male",
+      "report_type": "progress_note",
+      "diagnoses": [
+        "allergic rhinitis"
+      ],
+      "lab_values": [
+        {
+          "name": "ALT",
+          "value": 128.0,
+          "unit": "U/L"
+        },
+        {
+          "name": "AST",
+          "value": 96.0,
+          "unit": "U/L"
+        }
+      ],
+      "medications": [
+        {
+          "name": "cetirizine",
+          "dose": "10 mg",
+          "frequency": "1x/day"
+        }
+      ],
+      "urgency": "soon",
+      "follow_up_required": true
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 2442.8,
+    "input_tokens": 3343,
+    "output_tokens": 472,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTUDEs7M7EyPMC2WDVms",
+      "cost_usd": 0.0005702999999999999
+    },
+    "cost_usd": 0.0005702999999999999,
+    "timestamp": "2026-10-27T21:42:12+00:00"
+  },
+  {
+    "doc_id": "025",
+    "golden": false,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": 10,
+      "patient_sex": "unknown",
+      "report_type": "lab",
+      "diagnoses": [
+        "chronic kidney disease",
+        "acute otitis media"
+      ],
+      "lab_values": [
+        {
+          "name": "creatinine",
+          "value": 180.0,
+          "unit": null
+        },
+        {
+          "name": "eGFR",
+          "value": 38.0,
+          "unit": "mL/min"
+        },
+        {
+          "name": "potassium",
+          "value": 5.6,
+          "unit": "mmol/L"
+        }
+      ],
+      "medications": [
+        {
+          "name": "amoxicillin",
+          "dose": null,
+          "frequency": "3x/day"
+        },
+        {
+          "name": "lisinopril",
+          "dose": "10 mg",
+          "frequency": null
+        }
+      ],
+      "urgency": "routine",
+      "follow_up_required": true
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 1669.8,
+    "input_tokens": 3256,
+    "output_tokens": 214,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTUDRPsSfXyAgnoYvbxu",
+      "cost_usd": 0.0004326
+    },
+    "cost_usd": 0.0004326,
+    "timestamp": "2026-10-27T21:42:14+00:00"
+  },
+  {
+    "doc_id": "026",
+    "golden": false,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": 78,
+      "patient_sex": "female",
+      "report_type": "discharge",
+      "diagnoses": [
+        "atrial fibrillation",
+        "gastroesophageal reflux disease"
+      ],
+      "lab_values": [
+        {
+          "name": "INR",
+          "value": 1.1,
+          "unit": null
+        }
+      ],
+      "medications": [
+        {
+          "name": "apixaban",
+          "dose": "5 mg",
+          "frequency": "2x/day"
+        },
+        {
+          "name": "bisoprolol",
+          "dose": null,
+          "frequency": null
+        },
+        {
+          "name": "omeprazole",
+          "dose": "20 mg",
+          "frequency": null
+        }
+      ],
+      "urgency": "routine",
+      "follow_up_required": false
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 2491.7,
+    "input_tokens": 3135,
+    "output_tokens": 374,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTUDYeRyM23NZoEL76AG",
+      "cost_usd": 0.0005005
+    },
+    "cost_usd": 0.0005005,
+    "timestamp": "2026-10-27T21:42:16+00:00"
+  },
+  {
+    "doc_id": "027",
+    "golden": true,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": 34,
+      "patient_sex": "female",
+      "report_type": "progress_note",
+      "diagnoses": [
+        "major depressive disorder",
+        "community-acquired pneumonia"
+      ],
+      "lab_values": [
+        {
+          "name": "CRP",
+          "value": 12.0,
+          "unit": null
+        },
+        {
+          "name": "white blood cells",
+          "value": 11.2,
+          "unit": "10^9/L"
+        }
+      ],
+      "medications": [
+        {
+          "name": "sertraline",
+          "dose": null,
+          "frequency": "1x/day"
+        },
+        {
+          "name": "amoxicillin-clavulanate",
+          "dose": "875/125 mg",
+          "frequency": null
+        }
+      ],
+      "urgency": "routine",
+      "follow_up_required": false
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 2189.6,
+    "input_tokens": 3196,
+    "output_tokens": 200,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTUDj7UKroxYhGq9dZnm",
+      "cost_usd": 0.0004196
+    },
+    "cost_usd": 0.0004196,
+    "timestamp": "2026-10-27T21:42:18+00:00"
+  },
+  {
+    "doc_id": "028",
+    "golden": false,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": null,
+      "patient_sex": "male",
+      "report_type": "consult",
+      "diagnoses": [
+        "atopic dermatitis",
+        "asthma"
+      ],
+      "lab_values": [],
+      "medications": [
+        {
+          "name": "budesonide",
+          "dose": "200 mcg",
+          "frequency": "2x/day"
+        },
+        {
+          "name": "salbutamol",
+          "dose": null,
+          "frequency": "as needed"
+        },
+        {
+          "name": "hydrocortisone",
+          "dose": "1%",
+          "frequency": "2x/day"
+        }
+      ],
+      "urgency": "soon",
+      "follow_up_required": true
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 2423.0,
+    "input_tokens": 3195,
+    "output_tokens": 171,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTUDtWXQ4CHqxXWgFPzn",
+      "cost_usd": 0.000405
+    },
+    "cost_usd": 0.000405,
+    "timestamp": "2026-10-27T21:42:21+00:00"
+  },
+  {
+    "doc_id": "029",
+    "golden": false,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": 60,
+      "patient_sex": "male",
+      "report_type": "referral",
+      "diagnoses": [
+        "osteoporosis"
+      ],
+      "lab_values": [],
+      "medications": [
+        {
+          "name": "alendronate",
+          "dose": "70 mg",
+          "frequency": "weekly"
+        }
+      ],
+      "urgency": "routine",
+      "follow_up_required": true
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 1973.4,
+    "input_tokens": 3191,
+    "output_tokens": 105,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTUE51YfjMzui8mUovuA",
+      "cost_usd": 0.00037160000000000003
+    },
+    "cost_usd": 0.00037160000000000003,
+    "timestamp": "2026-10-27T21:42:23+00:00"
+  },
+  {
+    "doc_id": "030",
+    "golden": false,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": 26,
+      "patient_sex": "unknown",
+      "report_type": "progress_note",
+      "diagnoses": [
+        "deep vein thrombosis",
+        "urinary tract infection",
+        "gout"
+      ],
+      "lab_values": [
+        {
+          "name": "D-dimer",
+          "value": 2.4,
+          "unit": "mg/L"
+        },
+        {
+          "name": "urine leukocytes",
+          "value": 500.0,
+          "unit": "/uL"
+        },
+        {
+          "name": "uric acid",
+          "value": 520.0,
+          "unit": "umol/L"
+        }
+      ],
+      "medications": [
+        {
+          "name": "rivaroxaban",
+          "dose": "15 mg",
+          "frequency": "2x/day"
+        },
+        {
+          "name": "nitrofurantoin",
+          "dose": "100 mg",
+          "frequency": "2x/day"
+        },
+        {
+          "name": "allopurinol",
+          "dose": "100 mg",
+          "frequency": "1x/day"
+        }
+      ],
+      "urgency": "routine",
+      "follow_up_required": true
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 4559.5,
+    "input_tokens": 3512,
+    "output_tokens": 877,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTUEDN6jh3FCCT6zCjQU",
+      "cost_usd": 0.0007897000000000001
+    },
+    "cost_usd": 0.0007897000000000001,
+    "timestamp": "2026-10-27T21:42:27+00:00"
+  },
+  {
+    "doc_id": "031",
+    "golden": false,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": 72,
+      "patient_sex": "female",
+      "report_type": "discharge",
+      "diagnoses": [
+        "atopic dermatitis",
+        "chronic obstructive pulmonary disease"
+      ],
+      "lab_values": [],
+      "medications": [
+        {
+          "name": "hydrocortisone",
+          "dose": "1%",
+          "frequency": null
+        },
+        {
+          "name": "tiotropium",
+          "dose": "18 mcg",
+          "frequency": null
+        }
+      ],
+      "urgency": "routine",
+      "follow_up_required": true
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 1534.7,
+    "input_tokens": 3498,
+    "output_tokens": 147,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTUEYqNRPtNGcA58gGYd",
+      "cost_usd": 0.0004233
+    },
+    "cost_usd": 0.0004233,
+    "timestamp": "2026-10-27T21:42:29+00:00"
+  },
+  {
+    "doc_id": "032",
+    "golden": true,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": null,
+      "patient_sex": "unknown",
+      "report_type": "consult",
+      "diagnoses": [
+        "lumbar radiculopathy",
+        "acute appendicitis",
+        "hyperlipidemia"
+      ],
+      "lab_values": [
+        {
+          "name": "white blood cells",
+          "value": 15.4,
+          "unit": "10^9/L"
+        },
+        {
+          "name": "CRP",
+          "value": 86.0,
+          "unit": "mg/L"
+        },
+        {
+          "name": "LDL cholesterol",
+          "value": 4.1,
+          "unit": "mmol/L"
+        }
+      ],
+      "medications": [
+        {
+          "name": "naproxen",
+          "dose": null,
+          "frequency": "2x/day"
+        },
+        {
+          "name": "atorvastatin",
+          "dose": "20 mg",
+          "frequency": "1x/day"
+        }
+      ],
+      "urgency": "urgent",
+      "follow_up_required": true
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 1456.7,
+    "input_tokens": 3681,
+    "output_tokens": 244,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTUEfQW9spMovNMkNFzC",
+      "cost_usd": 0.0004901
+    },
+    "cost_usd": 0.0004901,
+    "timestamp": "2026-10-27T21:42:30+00:00"
+  },
+  {
+    "doc_id": "033",
+    "golden": false,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": null,
+      "patient_sex": "female",
+      "report_type": "progress_note",
+      "diagnoses": [
+        "community-acquired pneumonia",
+        "hyperkalemia",
+        "elevated liver enzymes"
+      ],
+      "lab_values": [
+        {
+          "name": "CRP",
+          "value": 12.0,
+          "unit": null
+        },
+        {
+          "name": "white blood cells",
+          "value": 11.2,
+          "unit": "10^9/L"
+        },
+        {
+          "name": "potassium",
+          "value": 6.8,
+          "unit": "mmol/L"
+        },
+        {
+          "name": "ALT",
+          "value": 128.0,
+          "unit": "U/L"
+        },
+        {
+          "name": "AST",
+          "value": 96.0,
+          "unit": null
+        }
+      ],
+      "medications": [
+        {
+          "name": "amoxicillin-clavulanate",
+          "dose": "875/125 mg",
+          "frequency": "2x/day"
+        }
+      ],
+      "urgency": "urgent",
+      "follow_up_required": true
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 2988.3,
+    "input_tokens": 3568,
+    "output_tokens": 257,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTUEme44PS2qoqtJgoR3",
+      "cost_usd": 0.00048530000000000003
+    },
+    "cost_usd": 0.00048530000000000003,
+    "timestamp": "2026-10-27T21:42:33+00:00"
+  },
+  {
+    "doc_id": "034",
+    "golden": true,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": null,
+      "patient_sex": "female",
+      "report_type": "lab",
+      "diagnoses": [
+        "asthma"
+      ],
+      "lab_values": [
+        {
+          "name": "hemoglobin",
+          "value": 13.4,
+          "unit": "g/dL"
+        }
+      ],
+      "medications": [
+        {
+          "name": "salbutamol",
+          "dose": "100 mcg",
+          "frequency": "as needed"
+        },
+        {
+          "name": "budesonide",
+          "dose": "200 mcg",
+          "frequency": "2x/day"
+        }
+      ],
+      "urgency": "urgent",
+      "follow_up_required": true
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 3708.4,
+    "input_tokens": 3298,
+    "output_tokens": 437,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTUEzUiy4GauLQ1SQU9C",
+      "cost_usd": 0.0005482999999999999
+    },
+    "cost_usd": 0.0005482999999999999,
+    "timestamp": "2026-10-27T21:42:37+00:00"
+  },
+  {
+    "doc_id": "035",
+    "golden": true,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": 59,
+      "patient_sex": "female",
+      "report_type": "radiology",
+      "diagnoses": [
+        "disc protrusion"
+      ],
+      "lab_values": [],
+      "medications": [],
+      "urgency": "routine",
+      "follow_up_required": false
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 1296.7,
+    "input_tokens": 2992,
+    "output_tokens": 77,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTUFGNwFkydSSsDmiqbr",
+      "cost_usd": 0.00033769999999999997
+    },
+    "cost_usd": 0.00033769999999999997,
+    "timestamp": "2026-10-27T21:42:38+00:00"
+  },
+  {
+    "doc_id": "036",
+    "golden": false,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": 44,
+      "patient_sex": "female",
+      "report_type": "radiology",
+      "diagnoses": [
+        "simple renal cyst"
+      ],
+      "lab_values": [],
+      "medications": [],
+      "urgency": "routine",
+      "follow_up_required": true
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 1119.2,
+    "input_tokens": 3688,
+    "output_tokens": 78,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTUFMupkoAjT6x4Hu26J",
+      "cost_usd": 0.0004078
+    },
+    "cost_usd": 0.0004078,
+    "timestamp": "2026-10-27T21:42:39+00:00"
+  },
+  {
+    "doc_id": "037",
+    "golden": true,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": null,
+      "patient_sex": "male",
+      "report_type": "consult",
+      "diagnoses": [
+        "knee osteoarthritis",
+        "chronic obstructive pulmonary disease",
+        "acute otitis media"
+      ],
+      "lab_values": [],
+      "medications": [
+        {
+          "name": "tiotropium",
+          "dose": "18 mcg",
+          "frequency": "1x/day"
+        },
+        {
+          "name": "amoxicillin",
+          "dose": null,
+          "frequency": "3x/day"
+        },
+        {
+          "name": "ibuprofen",
+          "dose": "400 mg",
+          "frequency": null
+        }
+      ],
+      "urgency": "routine",
+      "follow_up_required": true
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 2973.0,
+    "input_tokens": 3908,
+    "output_tokens": 586,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTUFSdqSgX3XD3FK1AdK",
+      "cost_usd": 0.0006837999999999999
+    },
+    "cost_usd": 0.0006837999999999999,
+    "timestamp": "2026-10-27T21:42:42+00:00"
+  },
+  {
+    "doc_id": "038",
+    "golden": true,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": null,
+      "patient_sex": "male",
+      "report_type": "referral",
+      "diagnoses": [
+        "gout"
+      ],
+      "lab_values": [],
+      "medications": [
+        {
+          "name": "allopurinol",
+          "dose": "100 mg",
+          "frequency": "1x/day"
+        }
+      ],
+      "urgency": "routine",
+      "follow_up_required": true
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 1782.7,
+    "input_tokens": 3160,
+    "output_tokens": 103,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTUFfN4a66W5iG7r8xv5",
+      "cost_usd": 0.0003675
+    },
+    "cost_usd": 0.0003675,
+    "timestamp": "2026-10-27T21:42:44+00:00"
+  },
+  {
+    "doc_id": "039",
+    "golden": false,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": null,
+      "patient_sex": "male",
+      "report_type": "progress_note",
+      "diagnoses": [
+        "gastroesophageal reflux disease"
+      ],
+      "lab_values": [],
+      "medications": [
+        {
+          "name": "omeprazole",
+          "dose": "20 mg",
+          "frequency": null
+        }
+      ],
+      "urgency": "soon",
+      "follow_up_required": true
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 1773.2,
+    "input_tokens": 3466,
+    "output_tokens": 110,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTUFnzhRLZNe3GnAv4mw",
+      "cost_usd": 0.0004016
+    },
+    "cost_usd": 0.0004016,
+    "timestamp": "2026-10-27T21:42:46+00:00"
+  },
+  {
+    "doc_id": "040",
+    "golden": false,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": null,
+      "patient_sex": "male",
+      "report_type": "progress_note",
+      "diagnoses": [
+        "chronic kidney disease"
+      ],
+      "lab_values": [
+        {
+          "name": "creatinine",
+          "value": 180.0,
+          "unit": null
+        },
+        {
+          "name": "eGFR",
+          "value": 38.0,
+          "unit": "ml/min"
+        },
+        {
+          "name": "potassium",
+          "value": 5.6,
+          "unit": "mmol/l"
+        }
+      ],
+      "medications": [
+        {
+          "name": "lisinopril",
+          "dose": "10 mg",
+          "frequency": null
+        }
+      ],
+      "urgency": "soon",
+      "follow_up_required": true
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 1766.9,
+    "input_tokens": 3022,
+    "output_tokens": 178,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTUFvfoWGmbnyg9yeZoC",
+      "cost_usd": 0.00039119999999999997
+    },
+    "cost_usd": 0.00039119999999999997,
+    "timestamp": "2026-10-27T21:42:48+00:00"
+  },
+  {
+    "doc_id": "041",
+    "golden": false,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": 20,
+      "patient_sex": "female",
+      "report_type": "lab",
+      "diagnoses": [
+        "osteoarthritis"
+      ],
+      "lab_values": [
+        {
+          "name": "hemoglobin",
+          "value": 13.4,
+          "unit": "g/dL"
+        }
+      ],
+      "medications": [
+        {
+          "name": "ibuprofen",
+          "dose": "400 mg",
+          "frequency": null
+        }
+      ],
+      "urgency": "routine",
+      "follow_up_required": false
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 2074.1,
+    "input_tokens": 3248,
+    "output_tokens": 333,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTUG4Cjqw43tEUhQ4q9A",
+      "cost_usd": 0.0004913
+    },
+    "cost_usd": 0.0004913,
+    "timestamp": "2026-10-27T21:42:50+00:00"
+  },
+  {
+    "doc_id": "042",
+    "golden": false,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": 83,
+      "patient_sex": "male",
+      "report_type": "consult",
+      "diagnoses": [
+        "benign prostatic hyperplasia",
+        "osteoporosis"
+      ],
+      "lab_values": [
+        {
+          "name": "PSA",
+          "value": 2.1,
+          "unit": null
+        }
+      ],
+      "medications": [
+        {
+          "name": "tamsulosin",
+          "dose": "0.4 mg",
+          "frequency": null
+        },
+        {
+          "name": "alendronate",
+          "dose": "70 mg",
+          "frequency": "weekly"
+        }
+      ],
+      "urgency": "soon",
+      "follow_up_required": true
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 1385.1,
+    "input_tokens": 3310,
+    "output_tokens": 181,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTUGD91e7DcNJy6cHjzH",
+      "cost_usd": 0.0004215
+    },
+    "cost_usd": 0.0004215,
+    "timestamp": "2026-10-27T21:42:51+00:00"
+  },
+  {
+    "doc_id": "043",
+    "golden": false,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": 79,
+      "patient_sex": "male",
+      "report_type": "progress_note",
+      "diagnoses": [
+        "benign prostatic hyperplasia"
+      ],
+      "lab_values": [
+        {
+          "name": "PSA",
+          "value": 2.1,
+          "unit": "ng/mL"
+        }
+      ],
+      "medications": [
+        {
+          "name": "tamsulosin",
+          "dose": "0.4 mg",
+          "frequency": "1x/day"
+        }
+      ],
+      "urgency": "routine",
+      "follow_up_required": false
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 1471.4,
+    "input_tokens": 3297,
+    "output_tokens": 145,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTUGK6viFFa7YMpMzMKH",
+      "cost_usd": 0.0004022
+    },
+    "cost_usd": 0.0004022,
+    "timestamp": "2026-10-27T21:42:53+00:00"
+  },
+  {
+    "doc_id": "044",
+    "golden": false,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": null,
+      "patient_sex": "unknown",
+      "report_type": "consult",
+      "diagnoses": [
+        "hyperlipidemia"
+      ],
+      "lab_values": [
+        {
+          "name": "LDL cholesterol",
+          "value": 4.1,
+          "unit": "mmol/L"
+        }
+      ],
+      "medications": [
+        {
+          "name": "atorvastatin",
+          "dose": "20 mg",
+          "frequency": "1x/day"
+        }
+      ],
+      "urgency": "urgent",
+      "follow_up_required": true
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 1641.9,
+    "input_tokens": 3078,
+    "output_tokens": 145,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTUGRRgNabLrzS2yw7rM",
+      "cost_usd": 0.00038030000000000003
+    },
+    "cost_usd": 0.00038030000000000003,
+    "timestamp": "2026-10-27T21:42:54+00:00"
+  },
+  {
+    "doc_id": "045",
+    "golden": false,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": null,
+      "patient_sex": "unknown",
+      "report_type": "referral",
+      "diagnoses": [
+        "chronic obstructive pulmonary disease",
+        "osteoporosis"
+      ],
+      "lab_values": [],
+      "medications": [
+        {
+          "name": "tiotropium",
+          "dose": "18 mcg",
+          "frequency": null
+        },
+        {
+          "name": "alendronate",
+          "dose": "70 mg",
+          "frequency": "weekly"
+        }
+      ],
+      "urgency": "routine",
+      "follow_up_required": true
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 1596.2,
+    "input_tokens": 3247,
+    "output_tokens": 149,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTUGYTr4zASBXDi88Dic",
+      "cost_usd": 0.00039920000000000005
+    },
+    "cost_usd": 0.00039920000000000005,
+    "timestamp": "2026-10-27T21:42:56+00:00"
+  },
+  {
+    "doc_id": "046",
+    "golden": false,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": null,
+      "patient_sex": "male",
+      "report_type": "referral",
+      "diagnoses": [
+        "acute otitis media",
+        "recurrent otitis media"
+      ],
+      "lab_values": [],
+      "medications": [
+        {
+          "name": "amoxicillin",
+          "dose": "250 mg",
+          "frequency": null
+        }
+      ],
+      "urgency": "soon",
+      "follow_up_required": true
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 1729.2,
+    "input_tokens": 3194,
+    "output_tokens": 119,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTUGfN5aTh3Giqh8EKeW",
+      "cost_usd": 0.00037890000000000005
+    },
+    "cost_usd": 0.00037890000000000005,
+    "timestamp": "2026-10-27T21:42:58+00:00"
+  },
+  {
+    "doc_id": "047",
+    "golden": false,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": 80,
+      "patient_sex": "female",
+      "report_type": "discharge",
+      "diagnoses": [
+        "osteoarthritis of knee",
+        "major depressive disorder"
+      ],
+      "lab_values": [],
+      "medications": [
+        {
+          "name": "sertraline",
+          "dose": "50 mg",
+          "frequency": "1x/day"
+        },
+        {
+          "name": "ibuprofen",
+          "dose": "400 mg",
+          "frequency": null
+        }
+      ],
+      "urgency": "routine",
+      "follow_up_required": false
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 1206.8,
+    "input_tokens": 3181,
+    "output_tokens": 146,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTUGndtS8midzjB8Xo8M",
+      "cost_usd": 0.0003911
+    },
+    "cost_usd": 0.0003911,
+    "timestamp": "2026-10-27T21:42:59+00:00"
+  },
+  {
+    "doc_id": "048",
+    "golden": true,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": null,
+      "patient_sex": "unknown",
+      "report_type": "consult",
+      "diagnoses": [
+        "heart failure with reduced ejection fraction",
+        "major depressive disorder",
+        "vitamin d deficiency"
+      ],
+      "lab_values": [
+        {
+          "name": "BNP",
+          "value": 890.0,
+          "unit": null
+        },
+        {
+          "name": "sodium",
+          "value": 134.0,
+          "unit": "mmol/L"
+        },
+        {
+          "name": "25-OH vitamin D",
+          "value": 14.0,
+          "unit": "ng/mL"
+        }
+      ],
+      "medications": [
+        {
+          "name": "furosemide",
+          "dose": "40 mg",
+          "frequency": "1x/day"
+        },
+        {
+          "name": "carvedilol",
+          "dose": "6.25 mg",
+          "frequency": "2x/day"
+        },
+        {
+          "name": "sertraline",
+          "dose": null,
+          "frequency": "1x/day"
+        },
+        {
+          "name": "cholecalciferol",
+          "dose": "2000 IU",
+          "frequency": "1x/day"
+        }
+      ],
+      "urgency": "soon",
+      "follow_up_required": true
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 2112.6,
+    "input_tokens": 3696,
+    "output_tokens": 327,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTUGsqAwXwFyTnvRDrFU",
+      "cost_usd": 0.0005331
+    },
+    "cost_usd": 0.0005331,
+    "timestamp": "2026-10-27T21:43:01+00:00"
+  },
+  {
+    "doc_id": "049",
+    "golden": false,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": 43,
+      "patient_sex": "male",
+      "report_type": "progress_note",
+      "diagnoses": [
+        "heart failure with reduced ejection fraction",
+        "hypothyroidism"
+      ],
+      "lab_values": [
+        {
+          "name": "BNP",
+          "value": 890.0,
+          "unit": "pg/mL"
+        },
+        {
+          "name": "sodium",
+          "value": 134.0,
+          "unit": "mmol/L"
+        },
+        {
+          "name": "TSH",
+          "value": 6.8,
+          "unit": null
+        }
+      ],
+      "medications": [
+        {
+          "name": "furosemide",
+          "dose": null,
+          "frequency": "1x/day"
+        },
+        {
+          "name": "carvedilol",
+          "dose": "6.25 mg",
+          "frequency": null
+        },
+        {
+          "name": "levothyroxine",
+          "dose": null,
+          "frequency": "1x/day"
+        }
+      ],
+      "urgency": "soon",
+      "follow_up_required": true
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 4063.6,
+    "input_tokens": 3278,
+    "output_tokens": 706,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTUH2t9SPT2YySuwpUjG",
+      "cost_usd": 0.0006808
+    },
+    "cost_usd": 0.0006808,
+    "timestamp": "2026-10-27T21:43:05+00:00"
+  },
+  {
+    "doc_id": "050",
+    "golden": false,
+    "prompt_version": "2",
+    "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
+    "config": "haiku_low",
+    "provider": "haiku",
+    "model": "claude-haiku-5-5",
+    "params": {
+      "effort": "low"
+    },
+    "parsed": {
+      "patient_age": 51,
+      "patient_sex": "female",
+      "report_type": "progress_note",
+      "diagnoses": [
+        "osteoporosis"
+      ],
+      "lab_values": [],
+      "medications": [
+        {
+          "name": "alendronate",
+          "dose": "70 mg",
+          "frequency": "weekly"
+        }
+      ],
+      "urgency": "routine",
+      "follow_up_required": true
+    },
+    "valid": true,
+    "validation_error": null,
+    "latency_ms": 1259.0,
+    "input_tokens": 3156,
+    "output_tokens": 107,
+    "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
+    "error": null,
+    "extra": {
+      "stop_reason": "end_turn",
+      "response_id": "msg_011CgTUHLBwwkJvidqSXoLpD",
+      "cost_usd": 0.0003691
+    },
+    "cost_usd": 0.0003691,
+    "timestamp": "2026-10-27T21:43:06+00:00"
+  }
+]

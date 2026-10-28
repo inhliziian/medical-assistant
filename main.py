@@ -6,6 +6,7 @@
   python main.py --prompts v1,v2 # also run prompt v2
   python main.py --skip-run      # rebuild the reports from existing results/*_full.json
   python main.py --configs haiku_low,qwen_t0 --prompts v1 --docs 004,034
+  python main.py --quick --prompts v2 --unconstrained   # free-form JSON: shows validation failures and the one-shot repair
 Requires: .env with ANTHROPIC_API_KEY, Ollama running with the model named in config/runs.toml.
 """
 from __future__ import annotations
@@ -46,15 +47,18 @@ def preflight(configs: list[str]) -> None:
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--configs", help="comma-separated; default: every config in config/runs.toml")
-    ap.add_argument("--prompts", default="v1", help="comma-separated prompt versions, e.g. v1,v2 (default: v1)")
+    ap.add_argument("--prompts", default="v1,v2", help="comma-separated prompt versions (default: v1,v2)")
     ap.add_argument("--docs", default="all", help="all | golden | comma-separated ids")
     ap.add_argument("--quick", action="store_true", help="golden documents only")
     ap.add_argument("--skip-run", action="store_true", help="only rebuild reports from results/*_full.json")
+    ap.add_argument("--unconstrained", action="store_true",
+                    help="drop the JSON schema from the API request (free-form JSON) to exercise validation + repair")
     ap.add_argument("--quiet", action="store_true", help="no per-document progress lines")
     args = ap.parse_args()
 
     from medassist.report_html import build_html
     from medassist.report_md import build_markdown
+    from medassist.report_prompts import build_prompt_page
 
     results_dir = ROOT / "results"
     if args.skip_run:
@@ -68,14 +72,17 @@ def main() -> None:
         docs = "golden" if args.quick else args.docs
         preflight(configs)
         tag = "full" if docs == "all" else ("golden" if docs == "golden" else "subset")
+        if args.unconstrained:
+            tag += "_unconstrained"   # never a "full" run: must not overwrite the main deliverables
         files = []
         for prompt in prompts:
-            files += run(configs, prompt, docs, tag=tag, quiet=args.quiet)
+            files += run(configs, prompt, docs, tag=tag, quiet=args.quiet, unconstrained=args.unconstrained)
 
     if args.skip_run or tag == "full":
         html = build_html(files, ROOT / "results" / "report-checkpoint-1.html")
         md = build_markdown(files, ROOT / "REPORT.md")
-        print(f"\nReports: {md.relative_to(ROOT)} and {html.relative_to(ROOT)}")
+        prompts_page = build_prompt_page()
+        print(f"\nReports: {md.relative_to(ROOT)}, {html.relative_to(ROOT)} and {prompts_page.relative_to(ROOT)}")
     else:
         # partial runs must not overwrite the main deliverables
         html = build_html(files, ROOT / "results" / "last-partial-run.html", "Partial run")

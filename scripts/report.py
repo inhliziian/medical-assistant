@@ -13,6 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 from medassist.report_html import build_html  # noqa: E402
 from medassist.report_md import build_markdown  # noqa: E402
+from medassist.report_prompts import build_prompt_page  # noqa: E402
 
 
 def main():
@@ -27,7 +28,8 @@ def main():
         raise SystemExit("no result files; run main.py first")
     html_out = build_html(files, Path(args.out), args.title)
     md_out = build_markdown(files, Path(args.md))
-    print(f"wrote {html_out.relative_to(ROOT)} and {md_out.relative_to(ROOT)} from {len(files)} result files")
+    prompts_out = build_prompt_page()
+    print(f"wrote {html_out.relative_to(ROOT)}, {md_out.relative_to(ROOT)} and {prompts_out.relative_to(ROOT)} from {len(files)} result files")
 
 
 if __name__ == "__main__":

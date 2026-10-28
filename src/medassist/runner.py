@@ -1,16 +1,18 @@
 """Run documents through configurations and write one pretty-printed JSON array per run.
 
-Each record holds the parsed output, validity, latency, tokens, cost and the run parameters. The model's
-raw text is not stored (the parsed JSON is the deliverable); validation errors are kept for error analysis."""
+Each record holds the parsed output, validity, status (ok | repaired | failed | error), latency, tokens, cost,
+the model, prompt version + hash and the sampling parameters. The model's raw text is not stored (the parsed
+JSON is the deliverable); validation errors are kept for error analysis."""
 from __future__ import annotations
 
 import json
 import sys
 import time
+from dataclasses import replace
 from datetime import datetime, timezone
 from pathlib import Path
 
-from .config import get
+from .config import build_provider, get
 from .prompts import Prompt
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -29,8 +31,10 @@ def select_docs(spec: str) -> list[str]:
     return [d.strip() for d in spec.split(",") if d.strip()]
 
 
-def run(configs: list[str], prompt_name: str, docs_spec: str = "all", tag: str = "", quiet: bool = False) -> list[Path]:
-    """Returns the result files written (one per config)."""
+def run(configs: list[str], prompt_name: str, docs_spec: str = "all", tag: str = "", quiet: bool = False,
+        unconstrained: bool = False) -> list[Path]:
+    """Returns the result files written (one per config). `unconstrained` drops the schema from the API
+    request (free-form JSON) so validation failures and the one-shot repair happen for real."""
     RESULTS.mkdir(exist_ok=True)
     prompt = Prompt.load(prompt_name)
     docs = select_docs(docs_spec)
@@ -39,6 +43,9 @@ def run(configs: list[str], prompt_name: str, docs_spec: str = "all", tag: str =
     written: list[Path] = []
     for cname in configs:
         provider, cfg = get(cname)
+        if unconstrained:
+            cfg = replace(cfg, params={**cfg.params, "constrained": False})
+            provider = build_provider(cfg)
         out = RESULTS / f"{stamp}_{cname}_{prompt_name}{('_' + tag) if tag else ''}.json"
         print(f"== {cname} ({cfg.model}) | prompt {prompt.version} | {len(docs)} docs -> {out.relative_to(ROOT)}", flush=True)
         t_batch = time.perf_counter()
@@ -50,17 +57,19 @@ def run(configs: list[str], prompt_name: str, docs_spec: str = "all", tag: str =
                 row = res.to_dict()
                 row.pop("raw_text", None)
                 row = {"doc_id": doc, "golden": doc in golden_ids, "prompt_version": prompt.version,
-                       "prompt_name": prompt.name, **row, "cost_usd": res.cost_usd,
+                       "prompt_name": prompt.name, "prompt_sha256": prompt.sha256, **row, "cost_usd": res.cost_usd,
                        "timestamp": datetime.now(timezone.utc).isoformat(timespec="seconds")}
                 rows.append(row)
                 out.write_text(json.dumps(rows, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
                 n_valid += res.valid
                 if not quiet:
-                    status = "ok " if res.valid else ("ERR" if res.error else "inv")
+                    status = {"ok": "ok  ", "repaired": "REP ", "failed": "FAIL", "error": "ERR "}[res.status]
+                    note = res.error or (res.validation_errors[0] if res.validation_errors else "")
                     print(f"  [{i:2d}/{len(docs)}] {doc} {status} {res.latency_ms:7.0f} ms"
-                          + (f"  {res.error[:60]}" if res.error else "")
-                          + (f"  {res.validation_error[:60]}" if res.validation_error and not res.error else ""),
+                          + (f"  {note[:70]}" if note else ""),
                           file=sys.stderr, flush=True)
-        print(f"   done: {n_valid}/{len(docs)} valid in {time.perf_counter() - t_batch:.0f} s", flush=True)
+        n_rep = sum(r["status"] == "repaired" for r in rows)
+        n_fail = sum(r["status"] == "failed" for r in rows)
+        print(f"   done: {n_valid}/{len(docs)} valid ({n_rep} repaired, {n_fail} failed) in {time.perf_counter() - t_batch:.0f} s", flush=True)
         written.append(out)
     return written

@@ -2,6 +2,7 @@
 The part before the slot is sent as system instructions; the report text goes in the user turn."""
 from __future__ import annotations
 
+import hashlib
 import re
 from dataclasses import dataclass
 from pathlib import Path
@@ -15,6 +16,7 @@ class Prompt:
     name: str          # e.g. "v1"
     version: str
     instructions: str  # system text, with the {{report_text}} line removed
+    sha256: str = ""   # hash of the whole prompt file, logged with every result so "v2" is verifiable
 
     @classmethod
     def load(cls, name: str) -> "Prompt":
@@ -30,4 +32,5 @@ class Prompt:
             text = text[m.end():]
         # the report is sent as the user message, so drop the placeholder line and anything after it
         text = re.split(r"\{\{\s*report_text\s*\}\}", text)[0]
-        return cls(name=name, version=version, instructions=text.strip())
+        digest = hashlib.sha256(path.read_bytes()).hexdigest()[:12]
+        return cls(name=name, version=version, instructions=text.strip(), sha256=digest)

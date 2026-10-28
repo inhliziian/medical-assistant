@@ -4,11 +4,13 @@
     "golden": true,
     "prompt_version": "2",
     "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
     "config": "haiku_low",
     "provider": "haiku",
     "model": "claude-haiku-5-5",
     "params": {
-      "effort": "low"
+      "effort": "low",
+      "constrained": false
     },
     "parsed": {
       "patient_age": null,
@@ -30,29 +32,42 @@
     },
     "valid": true,
     "validation_error": null,
-    "latency_ms": 1643.0,
-    "input_tokens": 3359,
-    "output_tokens": 112,
-    "attempts": 1,
+    "latency_ms": 4802.0,
+    "input_tokens": 4049,
+    "output_tokens": 399,
+    "attempts": 2,
+    "status": "repaired",
+    "transport_retries": 0,
+    "repair_attempted": true,
+    "validation_errors": [
+      "json: Invalid JSON: expected value at line 1 column 1"
+    ],
     "error": null,
     "extra": {
       "stop_reason": "end_turn",
-      "response_id": "msg_011CgMX9PBtGQMqM2QzY9W24",
-      "cost_usd": 0.00039190000000000004
+      "response_id": "msg_011CgTLfVSzNxjJDkUT3QhQe",
+      "first_answer": "```json\n{\n  \"patient_age\": null,\n  \"patient_sex\": \"male\",\n  \"report_type\": \"discharge\",\n  \"diagnoses\": [\"lumbar radiculopathy\"],\n  \"lab_values\": [],\n  \"medications\": [\n    {\n      \"name\": \"naproxen\",\n      \"dose\": \"500 mg\",\n      \"frequency\": \"2x/day\"\n    }\n  ],\n  \"urgency\": \"urgent\",\n  \"follow_up_required\": true\n}\n```",
+      "repair": {
+        "stop_reason": "end_turn",
+        "response_id": "msg_011CgTLfibGM5B7jUYVMTJcP"
+      },
+      "cost_usd": 0.0006044000000000001
     },
-    "cost_usd": 0.00039190000000000004,
-    "timestamp": "2026-10-24T18:17:05+00:00"
+    "cost_usd": 0.0006044000000000001,
+    "timestamp": "2026-10-27T20:03:16+00:00"
   },
   {
     "doc_id": "016",
     "golden": true,
     "prompt_version": "2",
     "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
     "config": "haiku_low",
     "provider": "haiku",
     "model": "claude-haiku-5-5",
     "params": {
-      "effort": "low"
+      "effort": "low",
+      "constrained": false
     },
     "parsed": {
       "patient_age": null,
@@ -100,29 +115,42 @@
     },
     "valid": true,
     "validation_error": null,
-    "latency_ms": 1360.7,
-    "input_tokens": 3649,
-    "output_tokens": 227,
-    "attempts": 1,
+    "latency_ms": 5770.5,
+    "input_tokens": 4764,
+    "output_tokens": 1055,
+    "attempts": 2,
+    "status": "repaired",
+    "transport_retries": 0,
+    "repair_attempted": true,
+    "validation_errors": [
+      "json: Invalid JSON: expected value at line 1 column 1"
+    ],
     "error": null,
     "extra": {
       "stop_reason": "end_turn",
-      "response_id": "msg_011CgMX9UrCbbXcuLgTBPnJX",
-      "cost_usd": 0.00047840000000000003
+      "response_id": "msg_011CgTLfpwGBRne2tb2SE4FP",
+      "first_answer": "```json\n{\n  \"patient_age\": null,\n  \"patient_sex\": \"female\",\n  \"report_type\": \"discharge\",\n  \"diagnoses\": [\n    \"essential hypertension\"\n  ],\n  \"lab_values\": [\n    {\"name\": \"creatinine\", \"value\": 92, \"unit\": \"umol/L\"},\n    {\"name\": \"potassium\", \"value\": 4.4, \"unit\": \"mmol/L\"},\n    {\"name\": \"ALT\", \"value\": 128, \"unit\": \"U/L\"},\n    {\"name\": \"AST\", \"value\": 96, \"unit\": null}\n  ],\n  \"medications\": [\n    {\"name\": \"amlodipine\", \"dose\": \"5 mg\", \"frequency\": \"1x/day\"},\n    {\"name\": \"lisinopril\", \"dose\": \"10 mg\", \"frequency\": null}\n  ],\n  \"urgency\": \"soon\",\n  \"follow_up_required\": true\n}\n```",
+      "repair": {
+        "stop_reason": "end_turn",
+        "response_id": "msg_011CgTLg4gzbFoXxHRhLZfth"
+      },
+      "cost_usd": 0.0010039
     },
-    "cost_usd": 0.00047840000000000003,
-    "timestamp": "2026-10-24T18:17:06+00:00"
+    "cost_usd": 0.0010039,
+    "timestamp": "2026-10-27T20:03:21+00:00"
   },
   {
     "doc_id": "023",
     "golden": true,
     "prompt_version": "2",
     "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
     "config": "haiku_low",
     "provider": "haiku",
     "model": "claude-haiku-5-5",
     "params": {
-      "effort": "low"
+      "effort": "low",
+      "constrained": false
     },
     "parsed": {
       "patient_age": 41,
@@ -171,29 +199,35 @@
     },
     "valid": true,
     "validation_error": null,
-    "latency_ms": 1827.4,
-    "input_tokens": 3705,
-    "output_tokens": 256,
+    "latency_ms": 3203.2,
+    "input_tokens": 2256,
+    "output_tokens": 677,
     "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
     "error": null,
     "extra": {
       "stop_reason": "end_turn",
-      "response_id": "msg_011CgMX9aifiVMA8zawncWnq",
-      "cost_usd": 0.0004985
+      "response_id": "msg_011CgTLgFcpPo9ZhqufZs4eb",
+      "cost_usd": 0.0005641
     },
-    "cost_usd": 0.0004985,
-    "timestamp": "2026-10-24T18:17:08+00:00"
+    "cost_usd": 0.0005641,
+    "timestamp": "2026-10-27T20:03:24+00:00"
   },
   {
     "doc_id": "027",
     "golden": true,
     "prompt_version": "2",
     "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
     "config": "haiku_low",
     "provider": "haiku",
     "model": "claude-haiku-5-5",
     "params": {
-      "effort": "low"
+      "effort": "low",
+      "constrained": false
     },
     "parsed": {
       "patient_age": 34,
@@ -232,29 +266,42 @@
     },
     "valid": true,
     "validation_error": null,
-    "latency_ms": 1950.3,
-    "input_tokens": 3196,
-    "output_tokens": 200,
-    "attempts": 1,
+    "latency_ms": 3954.1,
+    "input_tokens": 3858,
+    "output_tokens": 836,
+    "attempts": 2,
+    "status": "repaired",
+    "transport_retries": 0,
+    "repair_attempted": true,
+    "validation_errors": [
+      "json: Invalid JSON: expected value at line 1 column 1"
+    ],
     "error": null,
     "extra": {
       "stop_reason": "end_turn",
-      "response_id": "msg_011CgMX9iWyZLzrAWFLmw2b7",
-      "cost_usd": 0.0004196
+      "response_id": "msg_011CgTLgVGrjuA8MqEJ2Ak7x",
+      "first_answer": "```json\n{\n  \"patient_age\": 34,\n  \"patient_sex\": \"female\",\n  \"report_type\": \"progress_note\",\n  \"diagnoses\": [\n    \"major depressive disorder\",\n    \"community-acquired pneumonia\"\n  ],\n  \"lab_values\": [\n    {\n      \"name\": \"CRP\",\n      \"value\": 12,\n      \"unit\": null\n    },\n    {\n      \"name\": \"white blood cells\",\n      \"value\": 11.2,\n      \"unit\": \"10^9/L\"\n    }\n  ],\n  \"medications\": [\n    {\n      \"name\": \"sertraline\",\n      \"dose\": null,\n      \"frequency\": \"1x/day\"\n    },\n    {\n      \"name\": \"amoxicillin-clavulanate\",\n      \"dose\": \"875/125 mg\",\n      \"frequency\": null\n    }\n  ],\n  \"urgency\": \"routine\",\n  \"follow_up_required\": false\n}\n```",
+      "repair": {
+        "stop_reason": "end_turn",
+        "response_id": "msg_011CgTLghChs8wgBCYrsoizk"
+      },
+      "cost_usd": 0.0008037999999999999
     },
-    "cost_usd": 0.0004196,
-    "timestamp": "2026-10-24T18:17:10+00:00"
+    "cost_usd": 0.0008037999999999999,
+    "timestamp": "2026-10-27T20:03:28+00:00"
   },
   {
     "doc_id": "032",
     "golden": true,
     "prompt_version": "2",
     "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
     "config": "haiku_low",
     "provider": "haiku",
     "model": "claude-haiku-5-5",
     "params": {
-      "effort": "low"
+      "effort": "low",
+      "constrained": false
     },
     "parsed": {
       "patient_age": null,
@@ -299,29 +346,42 @@
     },
     "valid": true,
     "validation_error": null,
-    "latency_ms": 1684.9,
-    "input_tokens": 3681,
-    "output_tokens": 244,
-    "attempts": 1,
+    "latency_ms": 6035.7,
+    "input_tokens": 4886,
+    "output_tokens": 1207,
+    "attempts": 2,
+    "status": "repaired",
+    "transport_retries": 0,
+    "repair_attempted": true,
+    "validation_errors": [
+      "json: Invalid JSON: expected value at line 1 column 1"
+    ],
     "error": null,
     "extra": {
       "stop_reason": "end_turn",
-      "response_id": "msg_011CgMX9rsX2UdgjpNbAcW2t",
-      "cost_usd": 0.0004901
+      "response_id": "msg_011CgTLgnCpnxDK7nWzpXdxw",
+      "first_answer": "```json\n{\n  \"patient_age\": null,\n  \"patient_sex\": \"unknown\",\n  \"report_type\": \"consult\",\n  \"diagnoses\": [\n    \"lumbar radiculopathy\",\n    \"acute appendicitis\",\n    \"hyperlipidemia\"\n  ],\n  \"lab_values\": [\n    {\n      \"name\": \"white blood cells\",\n      \"value\": 15.4,\n      \"unit\": \"10^9/L\"\n    },\n    {\n      \"name\": \"CRP\",\n      \"value\": 86,\n      \"unit\": \"mg/L\"\n    },\n    {\n      \"name\": \"LDL cholesterol\",\n      \"value\": 4.1,\n      \"unit\": \"mmol/L\"\n    }\n  ],\n  \"medications\": [\n    {\n      \"name\": \"naproxen\",\n      \"dose\": null,\n      \"frequency\": \"2x/day\"\n    },\n    {\n      \"name\": \"atorvastatin\",\n      \"dose\": \"20 mg\",\n      \"frequency\": \"1x/day\"\n    }\n  ],\n  \"urgency\": \"urgent\",\n  \"follow_up_required\": true\n}\n```",
+      "repair": {
+        "stop_reason": "end_turn",
+        "response_id": "msg_011CgTLh3xNS2qLbE7kLbQwh"
+      },
+      "cost_usd": 0.0010921
     },
-    "cost_usd": 0.0004901,
-    "timestamp": "2026-10-24T18:17:12+00:00"
+    "cost_usd": 0.0010921,
+    "timestamp": "2026-10-27T20:03:34+00:00"
   },
   {
     "doc_id": "034",
     "golden": true,
     "prompt_version": "2",
     "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
     "config": "haiku_low",
     "provider": "haiku",
     "model": "claude-haiku-5-5",
     "params": {
-      "effort": "low"
+      "effort": "low",
+      "constrained": false
     },
     "parsed": {
       "patient_age": null,
@@ -354,36 +414,49 @@
     },
     "valid": true,
     "validation_error": null,
-    "latency_ms": 2064.8,
-    "input_tokens": 3298,
-    "output_tokens": 396,
-    "attempts": 1,
+    "latency_ms": 3962.2,
+    "input_tokens": 4007,
+    "output_tokens": 753,
+    "attempts": 2,
+    "status": "repaired",
+    "transport_retries": 0,
+    "repair_attempted": true,
+    "validation_errors": [
+      "json: Invalid JSON: expected value at line 1 column 1"
+    ],
     "error": null,
     "extra": {
       "stop_reason": "end_turn",
-      "response_id": "msg_011CgMX9z1PXrD3iu2bcashn",
-      "cost_usd": 0.0005277999999999999
+      "response_id": "msg_011CgTLhEB3AUnxahgGc6C7q",
+      "first_answer": "```json\n{\n  \"patient_age\": null,\n  \"patient_sex\": \"female\",\n  \"report_type\": \"lab\",\n  \"diagnoses\": [\"asthma\"],\n  \"lab_values\": [\n    {\n      \"name\": \"hemoglobin\",\n      \"value\": 13.4,\n      \"unit\": \"g/dL\"\n    }\n  ],\n  \"medications\": [\n    {\n      \"name\": \"salbutamol\",\n      \"dose\": \"100 mcg\",\n      \"frequency\": \"as needed\"\n    },\n    {\n      \"name\": \"budesonide\",\n      \"dose\": \"200 mcg\",\n      \"frequency\": \"2x/day\"\n    }\n  ],\n  \"urgency\": \"urgent\",\n  \"follow_up_required\": true\n}\n```",
+      "repair": {
+        "stop_reason": "end_turn",
+        "response_id": "msg_011CgTLhSBLotUnU9k586N9K"
+      },
+      "cost_usd": 0.0007772
     },
-    "cost_usd": 0.0005277999999999999,
-    "timestamp": "2026-10-24T18:17:14+00:00"
+    "cost_usd": 0.0007772,
+    "timestamp": "2026-10-27T20:03:38+00:00"
   },
   {
     "doc_id": "035",
     "golden": true,
     "prompt_version": "2",
     "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
     "config": "haiku_low",
     "provider": "haiku",
     "model": "claude-haiku-5-5",
     "params": {
-      "effort": "low"
+      "effort": "low",
+      "constrained": false
     },
     "parsed": {
       "patient_age": 59,
       "patient_sex": "female",
       "report_type": "radiology",
       "diagnoses": [
-        "disc protrusion"
+        "intervertebral disc protrusion"
       ],
       "lab_values": [],
       "medications": [],
@@ -392,29 +465,42 @@
     },
     "valid": true,
     "validation_error": null,
-    "latency_ms": 1042.9,
-    "input_tokens": 2992,
-    "output_tokens": 77,
-    "attempts": 1,
+    "latency_ms": 3415.8,
+    "input_tokens": 3276,
+    "output_tokens": 402,
+    "attempts": 2,
+    "status": "repaired",
+    "transport_retries": 0,
+    "repair_attempted": true,
+    "validation_errors": [
+      "json: Invalid JSON: expected value at line 1 column 1"
+    ],
     "error": null,
     "extra": {
       "stop_reason": "end_turn",
-      "response_id": "msg_011CgMXA8xtx2EviKWG95xbE",
-      "cost_usd": 0.00033769999999999997
+      "response_id": "msg_011CgTLhWzZfrsVHAJznx3iE",
+      "first_answer": "```json\n{\n  \"patient_age\": 59,\n  \"patient_sex\": \"female\",\n  \"report_type\": \"radiology\",\n  \"diagnoses\": [\n    \"intervertebral disc protrusion\"\n  ],\n  \"lab_values\": [],\n  \"medications\": [],\n  \"urgency\": \"routine\",\n  \"follow_up_required\": false\n}\n```",
+      "repair": {
+        "stop_reason": "end_turn",
+        "response_id": "msg_011CgTLhfpdhiyBzkMQpmMCQ"
+      },
+      "cost_usd": 0.0005286000000000001
     },
-    "cost_usd": 0.00033769999999999997,
-    "timestamp": "2026-10-24T18:17:15+00:00"
+    "cost_usd": 0.0005286000000000001,
+    "timestamp": "2026-10-27T20:03:42+00:00"
   },
   {
     "doc_id": "037",
     "golden": true,
     "prompt_version": "2",
     "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
     "config": "haiku_low",
     "provider": "haiku",
     "model": "claude-haiku-5-5",
     "params": {
-      "effort": "low"
+      "effort": "low",
+      "constrained": false
     },
     "parsed": {
       "patient_age": null,
@@ -448,29 +534,35 @@
     },
     "valid": true,
     "validation_error": null,
-    "latency_ms": 2623.4,
-    "input_tokens": 3908,
-    "output_tokens": 553,
+    "latency_ms": 3100.3,
+    "input_tokens": 2459,
+    "output_tokens": 632,
     "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
     "error": null,
     "extra": {
       "stop_reason": "end_turn",
-      "response_id": "msg_011CgMXADM4zs34eT3wJcNPD",
-      "cost_usd": 0.0006672999999999999
+      "response_id": "msg_011CgTLhmdPGaw9BsBujg2uc",
+      "cost_usd": 0.0005618999999999999
     },
-    "cost_usd": 0.0006672999999999999,
-    "timestamp": "2026-10-24T18:17:18+00:00"
+    "cost_usd": 0.0005618999999999999,
+    "timestamp": "2026-10-27T20:03:45+00:00"
   },
   {
     "doc_id": "038",
     "golden": true,
     "prompt_version": "2",
     "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
     "config": "haiku_low",
     "provider": "haiku",
     "model": "claude-haiku-5-5",
     "params": {
-      "effort": "low"
+      "effort": "low",
+      "constrained": false
     },
     "parsed": {
       "patient_age": null,
@@ -492,29 +584,42 @@
     },
     "valid": true,
     "validation_error": null,
-    "latency_ms": 1690.8,
-    "input_tokens": 3160,
-    "output_tokens": 103,
-    "attempts": 1,
+    "latency_ms": 3161.8,
+    "input_tokens": 3642,
+    "output_tokens": 439,
+    "attempts": 2,
+    "status": "repaired",
+    "transport_retries": 0,
+    "repair_attempted": true,
+    "validation_errors": [
+      "json: Invalid JSON: expected value at line 1 column 1"
+    ],
     "error": null,
     "extra": {
       "stop_reason": "end_turn",
-      "response_id": "msg_011CgMXAQYWP5W38jLqr5Mka",
-      "cost_usd": 0.0003675
+      "response_id": "msg_011CgTLhzrNjg7JXd1BD8Vgv",
+      "first_answer": "```json\n{\n  \"patient_age\": null,\n  \"patient_sex\": \"male\",\n  \"report_type\": \"referral\",\n  \"diagnoses\": [\"gout\"],\n  \"lab_values\": [],\n  \"medications\": [\n    {\n      \"name\": \"allopurinol\",\n      \"dose\": \"100 mg\",\n      \"frequency\": \"1x/day\"\n    }\n  ],\n  \"urgency\": \"routine\",\n  \"follow_up_required\": true\n}\n```",
+      "repair": {
+        "stop_reason": "end_turn",
+        "response_id": "msg_011CgTLi8zX74N4TDPsFWctG"
+      },
+      "cost_usd": 0.0005837
     },
-    "cost_usd": 0.0003675,
-    "timestamp": "2026-10-24T18:17:19+00:00"
+    "cost_usd": 0.0005837,
+    "timestamp": "2026-10-27T20:03:48+00:00"
   },
   {
     "doc_id": "048",
     "golden": true,
     "prompt_version": "2",
     "prompt_name": "v2",
+    "prompt_sha256": "eb0960f8030a",
     "config": "haiku_low",
     "provider": "haiku",
     "model": "claude-haiku-5-5",
     "params": {
-      "effort": "low"
+      "effort": "low",
+      "constrained": false
     },
     "parsed": {
       "patient_age": null,
@@ -523,7 +628,7 @@
       "diagnoses": [
         "heart failure with reduced ejection fraction",
         "major depressive disorder",
-        "vitamin d deficiency"
+        "vitamin D deficiency"
       ],
       "lab_values": [
         {
@@ -569,17 +674,21 @@
     },
     "valid": true,
     "validation_error": null,
-    "latency_ms": 2048.1,
-    "input_tokens": 3696,
-    "output_tokens": 327,
+    "latency_ms": 4197.4,
+    "input_tokens": 2247,
+    "output_tokens": 1019,
     "attempts": 1,
+    "status": "ok",
+    "transport_retries": 0,
+    "repair_attempted": false,
+    "validation_errors": [],
     "error": null,
     "extra": {
       "stop_reason": "end_turn",
-      "response_id": "msg_011CgMXAXnahmT7V5LS5FR2J",
-      "cost_usd": 0.0005331
+      "response_id": "msg_011CgTLiELVAUC3Gb2SgGjjx",
+      "cost_usd": 0.0007342000000000001
     },
-    "cost_usd": 0.0005331,
-    "timestamp": "2026-10-24T18:17:21+00:00"
+    "cost_usd": 0.0007342000000000001,
+    "timestamp": "2026-10-27T20:03:52+00:00"
   }
 ]
